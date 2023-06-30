@@ -1,0 +1,7721 @@
+@charset "UTF-8";
+/*
+@File: Raimo Template Styles
+
+* This file contains the styling for the actual template, this
+is the file you need to edit to change the look of the
+template.
+
+This files table contents are outlined below>>>>>
+
+*******************************************
+*******************************************
+
+** - Default CSS
+** - Navbar Area CSS
+** - Main Banner Area CSS
+** - About Area CSS
+** - Funfacts Area CSS
+** - Buy & Sell Cryptocurrency Area CSS
+** - Account Create Process Area CSS
+** - Cryptocurrency Platform Area CSS
+** - Cryptocurrency Details Area CSS
+** - Value Trade Area CSS
+** - Best Seller Cryptocurrency Area CSS
+** - Feedback Area CSS
+** - Tokens Area CSS
+** - Portfolio Area CSS
+** - Market Health Area CSS
+** - Features Area CSS
+** - App Download Area CSS
+** - Wallet Area CSS
+** - Advisor Area CSS
+** - Account Register Area CSS
+** - Reigster Area CSS
+** - Data Table Area CSS
+** - Earn Money Area CSS
+** - Page Title Area CSS
+** - Buy Cryptocurrency Area CSS
+** - Sell Cryptocurrency Area CSS
+** - Trade Cryptocurrency Area CSS
+** - Profile Authentication Area CSS
+** - Payment Method Area CSS
+** - Blog Area CSS
+** - Blog Details Area CSS
+** - Terms & Conditions Area CSS
+** - Privacy Policy Area CSS
+** - Guides Area CSS
+** - FAQ Area CSS
+** - Pagination CSS
+** - Contact Area CSS
+** - Footer Area CSS
+** - Go Top CSS
+*/
+/*================================================
+Default CSS
+=================================================*/
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+:root {
+  --fontFamily: 'Lato', sans-serif;
+  --fontFamily2: 'Open Sans', sans-serif;
+  --mainColor: #5466f9;
+  --backColor: #5466f9;
+  --optionalColor: #00a79D;
+  --whiteColor: #ffffff;
+  --blackColor: #000000;
+  --paragraphColor: #666666;
+  --fontSize: 15px;
+  --transition: .5s;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--blackColor);
+  font-size: var(--fontSize);
+  font-family: var(--fontFamily);
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  color: var(--blackColor);
+  font-family: var(--fontFamily2);
+  font-weight: 700;
+}
+
+a {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  color: var(--blackColor);
+  text-decoration: none;
+  outline: 0 !important;
+}
+
+a:hover {
+  color: var(--mainColor);
+  text-decoration: none;
+}
+
+:focus {
+  outline: 0 !important;
+}
+
+.d-table {
+  width: 100%;
+  height: 100%;
+}
+
+.d-table-cell {
+  vertical-align: middle;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  color: var(--paragraphColor);
+  font-size: var(--fontSize);
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.ptb-100 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.pt-100 {
+  padding-top: 100px;
+}
+
+.pb-100 {
+  padding-bottom: 100px;
+}
+
+.ptb-70 {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.pt-70 {
+  padding-top: 70px;
+}
+
+.pb-70 {
+  padding-bottom: 70px;
+}
+
+.bg-f9f9f9 {
+  background-color: #f9f9f9;
+}
+
+.bg-fffbf1 {
+  background-color: #fffbf1;
+}
+
+.bg-fff0ee {
+  background-color: #fff0ee;
+}
+
+/*section-title*/
+.section-title {
+  text-align: center;
+  max-width: 730px;
+  margin-top: -6px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 34px;
+  margin-bottom: 0;
+}
+
+.section-title h2 span {
+  color: #05b169;
+}
+
+.section-title p {
+  font-size: 16px;
+  margin-top: 13px;
+}
+
+/*default-btn*/
+.default-btn {
+  border-radius: 5px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  display: inline-block;
+  position: relative;
+  border: none;
+  background-color: var(--mainColor);
+  background: var(--default-button-background-color, linear-gradient(97.62deg, #5f5bcd 0%, #a8a4f7 100%));
+  color: var(--whiteColor);
+  padding-top: 12px;
+  padding-left: 55px;
+  padding-right: 30px;
+  padding-bottom: 12px;
+  font-family: var(--fontFamily2);
+  font-size: var(--fontSize);
+  font-weight: 600;
+}
+
+.default-btn i {
+  top: 50%;
+  left: 30px;
+  position: absolute;
+  font-weight: normal;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.default-btn:hover {
+  -webkit-box-shadow: 0 30px 50px rgba(107, 124, 147, 0.15);
+          box-shadow: 0 30px 50px rgba(107, 124, 147, 0.15);
+  background-color: var(--optionalColor);
+  color: var(--whiteColor);
+}
+
+/*form-control*/
+.form-control {
+  border-radius: 0;
+  background-color: #f9f9f9 !important;
+  -webkit-box-shadow: unset !important;
+          box-shadow: unset !important;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  border: none !important;
+  height: 50px;
+  border-top: 2px solid #eeeeee !important;
+  padding-left: 15px;
+  color: var(--blackColor);
+  font-family: var(--fontFamily2);
+  font-size: var(--fontSize);
+  font-weight: 500;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #999999;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.form-control:-ms-input-placeholder {
+  color: #999999;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.form-control::-ms-input-placeholder {
+  color: #999999;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.form-control::placeholder {
+  color: #999999;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  border-top-color: var(--mainColor) !important;
+}
+
+.form-control:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-control:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-control:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-control:focus::placeholder {
+  color: transparent;
+}
+
+textarea.form-control {
+  padding-top: 15px;
+  height: auto;
+}
+
+/*================================================
+Navbar Area CSS
+=================================================*/
+.navbar-area {
+  
+}
+
+.navbar-area .container {
+  max-width: 1400px;
+}
+
+.navbar-area.is-sticky {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  position: fixed;
+  background-color: var(--whiteColor) !important;
+  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
+          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
+  -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+          animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+}
+
+.navbar-area .navbar {
+  padding: 0;
+}
+
+.navbar-area .navbar ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.navbar-area .navbar .navbar-nav {
+  margin-left: 100px;
+}
+
+.navbar-area .navbar .navbar-nav .nav-item {
+  position: relative;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.navbar-area .navbar .navbar-nav .nav-item a {
+  position: relative;
+  color: var(--blackColor);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  font-weight: 600;
+  font-size: var(--fontSize);
+  font-family: var(--fontFamily2);
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.navbar-area .navbar .navbar-nav .nav-item a:hover, .navbar-area .navbar .navbar-nav .nav-item a.active {
+  color: var(--mainColor);
+}
+
+.navbar-area .navbar .navbar-nav .nav-item .dropdown-toggle {
+  padding-right: 14px;
+}
+
+.navbar-area .navbar .navbar-nav .nav-item .dropdown-toggle::after {
+  display: none;
+}
+
+.navbar-area .navbar .navbar-nav .nav-item .dropdown-toggle::before {
+  position: absolute;
+  content: "\e9ac";
+  line-height: 1;
+  right: -2px;
+  top: 35px;
+  font-family: boxicons;
+  font-size: 15px;
+}
+
+.navbar-area .navbar .navbar-nav .nav-item:last-child {
+  margin-right: 0;
+}
+
+.navbar-area .navbar .navbar-nav .nav-item:first-child {
+  margin-left: 0;
+}
+
+.navbar-area .navbar .navbar-nav .nav-item.active a {
+  color: var(--mainColor);
+}
+
+.navbar-area .navbar .navbar-nav .nav-item .dropdown-menu {
+  left: 0;
+  top: 82px;
+  opacity: 0;
+  z-index: 99;
+  border: none;
+  width: 250px;
+  margin-top: 0;
+  display: block;
+  padding: 10px 0;
+  border-radius: 0;
+  position: absolute;
+  visibility: hidden;
+  background: var(--whiteColor);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-area .navbar .navbar-nav .nav-item .dropdown-menu li {
+  margin: 0;
+}
+
+.navbar-area .navbar .navbar-nav .nav-item .dropdown-menu li a {
+  display: block;
+  padding: 8px 20px;
+  position: relative;
+  color: var(--blackColor);
+}
+
+.navbar-area .navbar .navbar-nav .nav-item .dropdown-menu li a:hover {
+  color: var(--mainColor);
+  padding-left: 25px;
+}
+
+.navbar-area .navbar .navbar-nav .nav-item .dropdown-menu li a.active {
+  color: var(--mainColor);
+}
+
+.navbar-area .navbar .navbar-nav .nav-item .dropdown-menu li a.dropdown-toggle::before {
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.navbar-area .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu {
+  top: 0;
+  opacity: 0;
+  left: 250px;
+  margin-top: 0;
+  visibility: hidden;
+}
+
+.navbar-area .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a {
+  color: var(--blackColor);
+  padding-left: 20px;
+}
+
+.navbar-area .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:hover {
+  color: var(--mainColor);
+  padding-left: 25px;
+}
+
+.navbar-area .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a.active {
+  color: var(--mainColor);
+}
+
+.navbar-area .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu {
+  top: 0;
+  opacity: 0;
+  left: 250px;
+  visibility: hidden;
+}
+
+.navbar-area .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
+  color: var(--blackColor);
+  padding-left: 20px;
+}
+
+.navbar-area .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover {
+  padding-left: 25px;
+  color: var(--mainColor);
+}
+
+.navbar-area .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
+  color: var(--mainColor);
+}
+
+.navbar-area .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
+  color: var(--mainColor);
+}
+
+.navbar-area .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar-area .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li.active a {
+  color: var(--mainColor);
+}
+
+.navbar-area .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar-area .navbar .navbar-nav .nav-item .dropdown-menu li.active a {
+  color: var(--mainColor);
+}
+
+.navbar-area .navbar .navbar-nav .nav-item .dropdown-menu li:hover .dropdown-menu {
+  opacity: 1;
+  margin-top: 0;
+  visibility: visible;
+}
+
+.navbar-area .navbar .navbar-nav .nav-item:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar-area .navbar .navbar-nav .nav-item.megamenu .dropdown-menu {
+  padding: 0;
+}
+
+.navbar-area .navbar .navbar-nav .nav-item.megamenu .dropdown-menu .nav-item .nav-link {
+  position: relative;
+  border-bottom: 1px solid #eeeeee;
+  padding-top: 18px;
+  padding-left: 65px;
+  padding-bottom: 18px;
+}
+
+.navbar-area .navbar .navbar-nav .nav-item.megamenu .dropdown-menu .nav-item .nav-link img {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+  max-width: 36px;
+  left: 19px;
+  top: 50%;
+}
+
+.navbar-area .navbar .navbar-nav .nav-item.megamenu .dropdown-menu .nav-item .nav-link i {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+  margin-top: -1px;
+  font-size: 35px;
+  left: 19px;
+  top: 50%;
+}
+
+.navbar-area .navbar .navbar-nav .nav-item.megamenu .dropdown-menu .nav-item:last-child .nav-link {
+  border-bottom: none;
+}
+
+.navbar-area .navbar .others-option {
+  margin-left: auto;
+}
+
+.navbar-area .navbar .others-option .option-item {
+  margin-left: 30px;
+}
+
+.navbar-area .navbar .others-option .option-item .login-btn {
+  display: inline-block;
+  color: var(--mainColor);
+  position: relative;
+  padding-left: 22px;
+  font-family: var(--fontFamily2);
+  font-weight: 600;
+}
+
+.navbar-area .navbar .others-option .option-item .login-btn i {
+  position: absolute;
+  top: 50%;
+  font-size: 20px;
+  left: -3px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.navbar-area .navbar .others-option .option-item .login-btn:hover {
+  color: var(--blackColor);
+}
+
+.navbar-area .navbar .others-option .option-item:first-child {
+  margin-left: 0;
+}
+
+.navbar-area .navbar .others-option .option-item .default-btn {
+  background-color: var(--optionalColor);
+}
+
+.navbar-area .navbar .others-option .option-item .default-btn:hover {
+  background-color: var(--mainColor);
+}
+
+.navbar-area .navbar .others-option .option-item .form-select {
+  border: none;
+  cursor: pointer;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  color: var(--blackColor);
+  background-position: right 0rem center;
+  padding-top: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+  padding-right: 4px;
+  font-family: var(--fontFamily2);
+  font-size: var(--fontSize);
+  font-weight: 600;
+}
+
+.navbar-area .navbar .others-option .option-item .register-btn {
+  display: inline-block;
+  color: var(--optionalColor);
+  position: relative;
+  padding-left: 22px;
+  font-family: var(--fontFamily2);
+  font-weight: 600;
+}
+
+.navbar-area .navbar .others-option .option-item .register-btn i {
+  position: absolute;
+  top: 50%;
+  font-size: 20px;
+  left: -3px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.navbar-area .navbar .others-option .option-item .register-btn:hover {
+  color: var(--blackColor);
+}
+
+.navbar-area.navbar-style-two .navbar .navbar-nav {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar-area.navbar-style-three .navbar .navbar-nav {
+  margin-left: auto;
+}
+
+.navbar-area.navbar-style-three .navbar .others-option {
+  margin-left: 30px;
+}
+
+.raimo-responsive-nav {
+  display: none;
+}
+
+@media only screen and (max-width: 991px) {
+  .navbar-area {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .navbar-area.is-sticky {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    background-color: var(--whiteColor) !important;
+    -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
+            box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
+    -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+            animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+  }
+  .navbar-area .navbar {
+    display: none;
+  }
+  .raimo-responsive-nav {
+    display: block;
+  }
+  .raimo-responsive-nav .raimo-responsive-menu {
+    position: relative;
+  }
+  .raimo-responsive-nav .raimo-responsive-menu.mean-container .mean-nav {
+    margin-top: 58px;
+    background-color: var(--whiteColor);
+  }
+  .raimo-responsive-nav .raimo-responsive-menu.mean-container .mean-nav ul {
+    font-size: 15px;
+    border: none !important;
+  }
+  .raimo-responsive-nav .raimo-responsive-menu.mean-container .mean-nav ul li a {
+    border-top-color: #DBEEFD;
+    color: var(--blackColor);
+    text-transform: unset;
+    font-weight: 600;
+  }
+  .raimo-responsive-nav .raimo-responsive-menu.mean-container .mean-nav ul li a i {
+    display: none;
+  }
+  .raimo-responsive-nav .raimo-responsive-menu.mean-container .mean-nav ul li a.mean-expand {
+    width: 50%;
+    height: 28px;
+    text-align: right;
+    padding: 11px !important;
+    background: transparent !important;
+    border-left: none !important;
+    border-bottom: none !important;
+  }
+  .raimo-responsive-nav .raimo-responsive-menu.mean-container .mean-nav ul li a.active {
+    color: var(--mainColor);
+  }
+  .raimo-responsive-nav .raimo-responsive-menu.mean-container .mean-nav ul li li a {
+    font-size: 14px;
+  }
+  .raimo-responsive-nav .raimo-responsive-menu.mean-container .mean-nav ul li.megamenu li a {
+    padding-left: 75px;
+  }
+  .raimo-responsive-nav .raimo-responsive-menu.mean-container .mean-nav ul li.megamenu li a img {
+    top: 50%;
+    left: 29px;
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .raimo-responsive-nav .raimo-responsive-menu.mean-container .mean-nav ul li.megamenu li a i {
+    display: inline-block;
+    font-size: 35px;
+    line-height: 1;
+    margin-top: -1px;
+    top: 50%;
+    left: 29px;
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .raimo-responsive-nav .raimo-responsive-menu.mean-container .navbar-nav {
+    max-height: 70vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
+  }
+  .raimo-responsive-nav .mean-container a.meanmenu-reveal {
+    top: 0;
+    padding: 0;
+    width: 35px;
+    height: 30px;
+    padding-top: 9px;
+    color: var(--blackColor);
+  }
+  .raimo-responsive-nav .mean-container a.meanmenu-reveal span {
+    top: 8px;
+    height: 4px;
+    margin-top: -6px;
+    border-radius: 3px;
+    position: relative;
+    background: var(--blackColor);
+  }
+  .raimo-responsive-nav .mean-container .mean-bar {
+    background: transparent;
+    position: absolute;
+    z-index: 999;
+    padding: 0;
+  }
+  .raimo-responsive-nav .dropdown-toggle::after {
+    display: none !important;
+  }
+  .raimo-responsive-nav .others-option {
+    position: absolute;
+    right: 55px;
+    top: 9px;
+  }
+  .raimo-responsive-nav .others-option .option-item {
+    margin-left: 7px;
+  }
+  .raimo-responsive-nav .others-option .option-item:first-child {
+    margin-left: 0;
+  }
+  .raimo-responsive-nav .others-option .default-btn {
+    display: none;
+  }
+  .raimo-responsive-nav .others-option .login-btn {
+    top: 2px;
+    font-size: 0;
+    position: relative;
+    display: inline-block;
+    color: var(--mainColor);
+  }
+  .raimo-responsive-nav .others-option .login-btn i {
+    font-size: 20px;
+  }
+  .raimo-responsive-nav .others-option .login-btn:hover {
+    color: var(--blackColor);
+  }
+  .raimo-responsive-nav .others-option .form-select {
+    border: none;
+    cursor: pointer;
+    -webkit-box-shadow: unset;
+            box-shadow: unset;
+    color: var(--blackColor);
+    background-size: 14px 10px;
+    background-color: transparent;
+    background-position: right 0rem center;
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+    padding-right: 6px;
+    font-family: var(--fontFamily2);
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .raimo-responsive-nav .others-option .register-btn {
+    display: none;
+  }
+  .raimo-responsive-nav .logo {
+    position: relative;
+    z-index: 999;
+    width: 50%;
+  }
+}
+
+/*================================================
+Main Banner Area CSS
+=================================================*/
+.main-banner-area {
+  background-color: #f9f9f9;
+  position: relative;
+  padding-top: 10px;
+  z-index: 1;
+}
+
+.main-banner-area .shape1 {
+  left: 10%;
+  top: 7%;
+}
+
+.main-banner-area .container {
+  max-width: 1400px;
+  position: relative;
+}
+
+.main-banner-area .shape9 {
+  right: 12%;
+}
+
+.main-banner-area .shape3 {
+  top: 7%;
+  right: 15%;
+  width: 100px;
+}
+
+.main-banner-box {
+  right: 0;
+  bottom: 32%;
+  width: 100%;
+  padding: 25px;
+  max-width: 450px;
+  position: absolute;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.main-banner-box .currency-selection {
+  position: relative;
+}
+
+.main-banner-box .currency-selection label {
+  color: var(--paragraphColor);
+  position: absolute;
+  left: 25px;
+  top: 10px;
+  font-family: var(--fontFamily2);
+  font-size: 14px;
+}
+
+.main-banner-box .currency-selection input {
+  width: 100%;
+  height: 70px;
+  border: none;
+  display: block;
+  border-radius: 5px;
+  padding: 20px 0 0 25px;
+  color: var(--blackColor);
+  border: 1px solid #eeeeee;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: var(--fontFamily2);
+}
+
+.main-banner-box .currency-selection .dropdown {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.main-banner-box .currency-selection .dropdown .dropdown-toggle {
+  border: none;
+  margin-top: 0;
+  height: 70px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  position: relative;
+  color: var(--blackColor);
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  background-color: #eeeeee;
+  padding: 0 65px 0 75px;
+  font-family: var(--fontFamily2);
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.main-banner-box .currency-selection .dropdown .dropdown-toggle img {
+  width: 35px;
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.main-banner-box .currency-selection .dropdown .dropdown-toggle::after {
+  display: none;
+}
+
+.main-banner-box .currency-selection .dropdown .dropdown-toggle.show {
+  background-color: #f9f9f9;
+}
+
+.main-banner-box .currency-selection .dropdown .dropdown-toggle.show::before {
+  -webkit-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
+}
+
+.main-banner-box .currency-selection .dropdown .dropdown-menu {
+  position: absolute;
+  display: block;
+  width: 100%;
+  -webkit-box-shadow: 5px 5px 70px rgba(0, 0, 0, 0.15);
+          box-shadow: 5px 5px 70px rgba(0, 0, 0, 0.15);
+  border-radius: 0;
+  padding: 0;
+  -webkit-transform: unset !important;
+          transform: unset !important;
+  overflow-x: hidden;
+  border: none;
+  background-color: var(--whiteColor);
+  overflow-y: scroll;
+  min-width: auto;
+  height: 260px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  top: 0;
+  margin-top: 20px !important;
+  left: 0;
+  inset: unset !important;
+  border-radius: 0 5px 0 0;
+}
+
+.main-banner-box .currency-selection .dropdown .dropdown-menu li {
+  border-bottom: 1px solid #eeeeee;
+  padding: 20px 15px;
+}
+
+.main-banner-box .currency-selection .dropdown .dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.main-banner-box .currency-selection .dropdown .dropdown-menu .dropdown-item {
+  cursor: pointer;
+  position: relative;
+  color: var(--blackColor);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  padding: 0 0 0 45px;
+  background-color: transparent;
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--fontFamily2);
+}
+
+.main-banner-box .currency-selection .dropdown .dropdown-menu .dropdown-item:last-child {
+  margin-bottom: 0;
+}
+
+.main-banner-box .currency-selection .dropdown .dropdown-menu .dropdown-item img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.main-banner-box .currency-selection .dropdown .dropdown-menu .dropdown-item:hover {
+  color: var(--mainColor);
+}
+
+.main-banner-box .currency-selection .dropdown .dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  margin-top: 0 !important;
+}
+
+.main-banner-box .features-list {
+  margin-bottom: 0;
+  padding-left: 40px;
+  list-style-type: none;
+}
+
+.main-banner-box .features-list li {
+  color: var(--paragraphColor);
+  position: relative;
+  z-index: 1;
+  font-family: var(--fontFamily2);
+  font-size: var(--fontSize);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.main-banner-box .features-list li i {
+  color: var(--mainColor);
+  width: 24px;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 12px;
+  line-height: 24px;
+  height: 24px;
+  background-color: #eeeeee;
+  font-size: 14px;
+}
+
+.main-banner-box .features-list li::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: #eeeeee;
+  z-index: -1;
+}
+
+.main-banner-box .features-list li:nth-child(1) {
+  padding-bottom: 12px;
+}
+
+.main-banner-box .features-list li:nth-child(2) {
+  padding-top: 0;
+}
+
+.main-banner-box .features-list li .second-span {
+  margin-left: 20px;
+}
+
+.main-banner-box .features-list li .first-span {
+  width: 130px;
+}
+
+.main-banner-box button {
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+  margin-top: 25px;
+  text-align: center;
+  position: relative;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  background-color: var(--optionalColor);
+  color: var(--whiteColor);
+  border: none;
+  padding: 13px 30px;
+  font-family: var(--fontFamily2);
+  font-size: var(--fontSize);
+  font-weight: 600;
+}
+
+.main-banner-box button i {
+  font-size: 20px;
+  margin-left: -30px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  line-height: 1;
+}
+
+.main-banner-box button:hover {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+}
+
+.main-banner-box .coinbaseBtn {
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+  margin-top: 25px;
+  text-align: center;
+  position: relative;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  background-color: var(--optionalColor);
+  color: var(--whiteColor);
+  border: none;
+  padding: 13px 30px;
+  font-family: var(--fontFamily2);
+  font-size: var(--fontSize);
+  font-weight: 600;
+}
+
+.main-banner-box .coinbaseBtn i {
+  font-size: 20px;
+  margin-left: -30px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  line-height: 1;
+}
+
+.main-banner-box .coinbaseBtn:hover {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+}
+
+.main-banner-content {
+  position: relative;
+}
+
+.main-banner-content h1 {
+  margin-bottom: 20px;
+  line-height: 1.4;
+  font-size: 52px;
+}
+
+.main-banner-content p {
+  font-size: 16px;
+  max-width: 640px;
+}
+
+.main-banner-content .default-btn {
+  margin-top: 15px;
+}
+
+.main-banner-image {
+  margin-left: -70px;
+}
+
+.banner-area {
+  background-color: #f9f9f9;
+  position: relative;
+  padding-top: 20px;
+  z-index: 1;
+}
+
+.banner-area .container {
+  max-width: 1400px;
+  position: relative;
+}
+
+.banner-content {
+  top: 50%;
+  left: 8px;
+  width: 100%;
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.banner-content h1 {
+  margin-bottom: 20px;
+  line-height: 1.4;
+  max-width: 720px;
+  font-size: 54px;
+}
+
+.banner-content .cryptocurrency-search-box {
+  background-color: var(--mainColor);
+  border-radius: 10px;
+  max-width: 1300px;
+  margin-top: 50px;
+  padding: 40px;
+}
+
+.banner-content .cryptocurrency-search-box .currency-selection {
+  position: relative;
+}
+
+.banner-content .cryptocurrency-search-box .currency-selection label {
+  color: var(--paragraphColor);
+  position: absolute;
+  left: 30px;
+  top: 10px;
+  font-family: var(--fontFamily2);
+  font-size: 14px;
+}
+
+.banner-content .cryptocurrency-search-box .currency-selection input {
+  width: 100%;
+  height: 70px;
+  border: none;
+  display: block;
+  border-radius: 5px;
+  padding: 20px 0 0 30px;
+  color: var(--blackColor);
+  font-size: 22px;
+  font-weight: 700;
+  font-family: var(--fontFamily2);
+}
+
+.banner-content .cryptocurrency-search-box .currency-selection .dropdown {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.banner-content .cryptocurrency-search-box .currency-selection .dropdown .dropdown-toggle {
+  border: none;
+  height: 70px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  position: relative;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  background-color: #eeeeee;
+  padding: 0 65px 0 75px;
+  font-family: var(--fontFamily2);
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.banner-content .cryptocurrency-search-box .currency-selection .dropdown .dropdown-toggle img {
+  width: 35px;
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.banner-content .cryptocurrency-search-box .currency-selection .dropdown .dropdown-toggle::after {
+  display: none;
+}
+
+.banner-content .cryptocurrency-search-box .currency-selection .dropdown .dropdown-toggle.show {
+  background-color: #f9f9f9;
+}
+
+.banner-content .cryptocurrency-search-box .currency-selection .dropdown .dropdown-toggle.show::before {
+  -webkit-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
+}
+
+.banner-content .cryptocurrency-search-box .currency-selection .dropdown .dropdown-menu {
+  position: absolute;
+  display: block;
+  width: 100%;
+  -webkit-box-shadow: 5px 5px 70px rgba(0, 0, 0, 0.15);
+          box-shadow: 5px 5px 70px rgba(0, 0, 0, 0.15);
+  border-radius: 0;
+  padding: 0;
+  -webkit-transform: unset !important;
+          transform: unset !important;
+  border: none;
+  background-color: var(--whiteColor);
+  overflow-y: scroll;
+  min-width: auto;
+  height: 260px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  top: 0;
+  overflow-x: hidden;
+  margin-top: 20px !important;
+  left: 0;
+  inset: unset !important;
+  border-radius: 0 5px 0 0;
+}
+
+.banner-content .cryptocurrency-search-box .currency-selection .dropdown .dropdown-menu li {
+  border-bottom: 1px solid #eeeeee;
+  padding: 20px 15px;
+}
+
+.banner-content .cryptocurrency-search-box .currency-selection .dropdown .dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.banner-content .cryptocurrency-search-box .currency-selection .dropdown .dropdown-menu .dropdown-item {
+  cursor: pointer;
+  position: relative;
+  color: var(--blackColor);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  padding: 0 0 0 45px;
+  background-color: transparent;
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--fontFamily2);
+}
+
+.banner-content .cryptocurrency-search-box .currency-selection .dropdown .dropdown-menu .dropdown-item:last-child {
+  margin-bottom: 0;
+}
+
+.banner-content .cryptocurrency-search-box .currency-selection .dropdown .dropdown-menu .dropdown-item img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.banner-content .cryptocurrency-search-box .currency-selection .dropdown .dropdown-menu .dropdown-item:hover {
+  color: var(--mainColor);
+}
+
+.banner-content .cryptocurrency-search-box .currency-selection .dropdown .dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  margin-top: 0 !important;
+}
+
+.banner-content .cryptocurrency-search-box .col-lg-5 {
+  width: 40%;
+}
+
+.banner-content .cryptocurrency-search-box .col-lg-2 {
+  width: 20%;
+}
+
+.banner-content .cryptocurrency-search-box .buy-btn {
+  text-align: center;
+}
+
+.banner-content .cryptocurrency-search-box .buy-btn button {
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+  position: relative;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  height: 70px;
+  background-color: var(--optionalColor);
+  color: var(--whiteColor);
+  border: none;
+  padding: 0 30px 0 55px;
+  font-family: var(--fontFamily2);
+  font-size: var(--fontSize);
+  font-weight: 600;
+}
+
+.banner-content .cryptocurrency-search-box .buy-btn button i {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  line-height: 1;
+  left: 55px;
+}
+
+.banner-content .cryptocurrency-search-box .buy-btn button:hover {
+  background-color: var(--blackColor);
+  color: var(--whiteColor);
+}
+
+.banner-image {
+  text-align: end;
+}
+
+.banner-wrapper-area {
+  
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.banner-wrapper-area .container {
+  max-width: 1400px;
+}
+
+.banner-wrapper-content .sub-title {
+  margin-bottom: 20px;
+  border-radius: 30px;
+  display: inline-block;
+  color: var(--whiteColor);
+  background-color: var(--optionalColor);
+  padding: 4px 20px;
+  font-size: 14px;
+}
+
+.banner-wrapper-content h1 {
+  font-size: 44px;
+  line-height: 1.3;
+  margin-bottom: 25px;
+}
+
+.banner-wrapper-content p {
+  font-size: 16px;
+}
+
+.banner-wrapper-content form {
+  margin-top: 35px;
+  max-width: 550px;
+  position: relative;
+}
+
+.banner-wrapper-content form .input-newsletter {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: 1px solid #eeeeee;
+  padding: 15px;
+  color: var(--blackColor);
+  border-radius: 5px;
+}
+
+.banner-wrapper-content form .input-newsletter::-webkit-input-placeholder {
+  color: #999999;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.banner-wrapper-content form .input-newsletter:-ms-input-placeholder {
+  color: #999999;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.banner-wrapper-content form .input-newsletter::-ms-input-placeholder {
+  color: #999999;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.banner-wrapper-content form .input-newsletter::placeholder {
+  color: #999999;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.banner-wrapper-content form .input-newsletter:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.banner-wrapper-content form .input-newsletter:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.banner-wrapper-content form .input-newsletter:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.banner-wrapper-content form .input-newsletter:focus::placeholder {
+  color: transparent;
+}
+
+.banner-wrapper-content form button {
+  position: absolute;
+  right: 0;
+  height: 50px;
+  background-color: var(--mainColor);
+  top: 0;
+  color: var(--whiteColor);
+  border: none;
+  padding: 0 43px 0 30px;
+  border-radius: 5px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  font-weight: 600;
+  font-family: var(--fontFamily2);
+}
+
+.banner-wrapper-content form button:hover {
+  background-color: var(--optionalColor);
+  color: var(--whiteColor);
+}
+
+.banner-wrapper-content form button i {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 20px;
+  font-size: 25px;
+}
+
+.banner-wrapper-image {
+  text-align: center;
+}
+
+.shape1 {
+  position: absolute;
+  z-index: -1;
+  left: 18%;
+  top: 10%;
+}
+
+.shape1 img {
+  -webkit-animation: moveleftbounce 5s linear infinite;
+          animation: moveleftbounce 5s linear infinite;
+}
+
+.shape2 {
+  position: absolute;
+  z-index: -1;
+  bottom: 10%;
+  left: 14%;
+}
+
+.shape2 img {
+  -webkit-animation: movescale 3s linear infinite;
+          animation: movescale 3s linear infinite;
+}
+
+.shape3 {
+  position: absolute;
+  z-index: -1;
+  right: 39%;
+  top: 18%;
+}
+
+.shape3 img {
+  -webkit-animation: movebounce 5s linear infinite;
+          animation: movebounce 5s linear infinite;
+}
+
+.shape4 {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 4%;
+}
+
+.shape5 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+/*================================================
+About Area CSS
+=================================================*/
+.about-area {
+  border-top: 1px solid #eeeeee;
+}
+
+.about-content {
+  border-radius: 0 0 5px 5px;
+  background-color: var(--blackColor);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 500px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+
+.about-content .content {
+  padding: 30px;
+  max-width: 720px;
+  border-radius: 5px;
+  background-color: var(--whiteColor);
+}
+
+.about-content .content h1 {
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.about-content .content p {
+  font-size: 16px;
+}
+
+.history-timeline.timeline {
+  max-width: 960px;
+  position: relative;
+  margin: 100px auto 0;
+}
+
+.history-timeline.timeline .timeline-event {
+  margin-bottom: 30px;
+  position: relative;
+  border-radius: 5px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.history-timeline.timeline .timeline-event:nth-child(2n+1) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.history-timeline.timeline .timeline-event:nth-child(2n+1) .timeline-event-icon {
+  margin-right: 0;
+  margin-left: 20px;
+}
+
+.history-timeline.timeline .timeline-event:nth-child(2n+1) .timeline-event-icon:after {
+  left: auto;
+  right: 100%;
+}
+
+.history-timeline.timeline .timeline-event:nth-child(2n+1) .timeline-event-date {
+  border-radius: 0 5px 5px 0;
+}
+
+.history-timeline.timeline .timeline-event:nth-child(2n+1) .timeline-event-content {
+  border-radius: 5px 0 0 5px;
+}
+
+.history-timeline.timeline .timeline-event:last-child {
+  margin-bottom: 0;
+}
+
+.history-timeline.timeline .timeline-event:last-child .timeline-event-icon:before {
+  display: none;
+}
+
+.history-timeline.timeline .timeline-event:last-child .timeline-event-icon:after {
+  display: none;
+}
+
+.history-timeline.timeline .timeline-event-content {
+  padding: 30px;
+  border-radius: 0 6px 6px 0;
+  background-color: #f9f9f9;
+}
+
+.history-timeline.timeline .timeline-event-content h3 {
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.history-timeline.timeline .timeline-event-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 110px;
+  text-align: center;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px 0 0 5px;
+  background-color: var(--mainColor);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.history-timeline.timeline .timeline-event-date span {
+  right: 10px;
+  bottom: 10px;
+  padding: 2px 12px;
+  border-radius: 5px;
+  position: absolute;
+  display: inline-block;
+  background-color: var(--whiteColor);
+  font-size: var(--fontSize);
+  font-weight: 700;
+}
+
+.history-timeline.timeline .timeline-event-date.bg1 {
+  
+}
+
+.history-timeline.timeline .timeline-event-date.bg2 {
+  
+}
+
+.history-timeline.timeline .timeline-event-date.bg3 {
+  
+}
+
+.history-timeline.timeline .timeline-event-date.bg4 {
+  
+}
+
+.history-timeline.timeline .timeline-event-date.bg5 {
+  
+}
+
+.history-timeline.timeline .timeline-event-icon {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+  padding: 40px;
+  font-size: 35px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  position: relative;
+  margin: 0 20px 0 0;
+  border-radius: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--whiteColor);
+  background: var(--optionalColor);
+}
+
+.history-timeline.timeline .timeline-event-icon:before {
+  left: 50%;
+  top: 100%;
+  width: 2px;
+  z-index: -1;
+  content: "";
+  height: 100%;
+  position: absolute;
+  background: #eeeeee;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.history-timeline.timeline .timeline-event-icon:after {
+  top: 50%;
+  left: 100%;
+  content: "";
+  width: 100%;
+  height: 2px;
+  z-index: -1;
+  position: absolute;
+  background: #eeeeee;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+/*================================================
+Funfacts Area CSS
+=================================================*/
+.single-funfacts-box {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.single-funfacts-box .icon {
+  margin-bottom: 25px;
+  display: inline-block;
+  position: relative;
+}
+
+.single-funfacts-box .icon img.main-icon {
+  left: 0;
+  right: 0;
+  top: 50%;
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.single-funfacts-box h3 {
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+.funfacts-box {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.funfacts-box .icon {
+  display: inline-block;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.funfacts-box .icon .main-icon {
+  left: 0;
+  right: 0;
+  top: 50%;
+  width: 80px;
+  height: 80px;
+  line-height: 75px;
+  position: absolute;
+  border-radius: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: var(--whiteColor);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.funfacts-box .icon .main-icon img {
+  width: 40px;
+}
+
+.funfacts-box h3 {
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+/*================================================
+Buy & Sell Cryptocurrency Area CSS
+=================================================*/
+.buy-sell-cryptocurrency-area {
+  position: relative;
+  z-index: 1;
+}
+
+.buy-sell-cryptocurrency-area.bg-image {
+  background-image: url(../images/bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.buy-sell-cryptocurrency-content {
+  margin-bottom: -30px;
+}
+
+.buy-sell-cryptocurrency-content .single-buy-sell-box {
+  margin-bottom: 22px;
+}
+
+.single-buy-sell-box {
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  border: 1px solid #e5e5e5;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.single-buy-sell-box .icon {
+  margin-bottom: 25px;
+}
+
+.single-buy-sell-box h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.single-buy-sell-box:hover {
+  border-color: var(--mainColor);
+}
+
+.buy-sell-cryptocurrency-image {
+  text-align: center;
+}
+
+.single-buy-sell-item {
+  padding: 30px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 30px;
+  border: 1px dashed #e5e5e5;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.single-buy-sell-item .icon {
+  margin-bottom: 27px;
+}
+
+.single-buy-sell-item h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.single-buy-sell-item:hover {
+  border-color: var(--mainColor);
+}
+
+/*================================================
+Account Create Process Area CSS
+=================================================*/
+.account-create-process-area.bg-image {
+  background-image: url(../images/bg2.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.account-create-process-content .section-title {
+  text-align: start;
+  max-width: 700px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+
+.account-create-process-content .section-title h2 {
+  margin-bottom: 13px;
+}
+
+.account-create-process-content .section-title p {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.account-create-process-content .section-title p:last-child {
+  margin-bottom: 0;
+}
+
+.account-create-process-content .single-process-box {
+  margin-bottom: 0;
+  margin-top: 30px;
+}
+
+.single-process-box {
+  margin-bottom: 30px;
+}
+
+.single-process-box .icon {
+  margin-bottom: 22px;
+}
+
+.single-process-box h3 {
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.single-process-item {
+  padding: 40px 30px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 30px;
+  border: 1px dashed #f0f0f0;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  background-color: var(--whiteColor);
+}
+
+.single-process-item .icon {
+  margin-bottom: 25px;
+}
+
+.single-process-item h3 {
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.single-process-item:hover {
+  border-color: var(--mainColor);
+}
+
+/*================================================
+Cryptocurrency Platform Area CSS
+=================================================*/
+.cryptocurrency-platform-area .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.single-cryptocurrency-platform-box {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.single-cryptocurrency-platform-box .content {
+  position: absolute;
+  top: 50%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 5px;
+  left: -80px;
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.single-cryptocurrency-platform-box .content .icon {
+  background-color: var(--whiteColor);
+  width: 100px;
+  text-align: center;
+  height: 100px;
+  line-height: 100px;
+  border-radius: 50%;
+  margin-bottom: 25px;
+}
+
+.single-cryptocurrency-platform-box .content .icon img {
+  width: 50px;
+  display: inline-block;
+}
+
+.single-cryptocurrency-platform-box .content h3 {
+  margin-bottom: 12px;
+  font-size: 20px;
+  color: var(--whiteColor);
+}
+
+.single-cryptocurrency-platform-box .content h3 a {
+  color: var(--whiteColor);
+}
+
+.single-cryptocurrency-platform-box .content p {
+  color: var(--whiteColor);
+}
+
+.single-cryptocurrency-platform-box .content .link-btn {
+  display: inline-block;
+  position: relative;
+  padding-right: 13px;
+  font-weight: 600;
+  color: var(--whiteColor);
+}
+
+.single-cryptocurrency-platform-box .content .link-btn i {
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  margin-top: 1.5px;
+  right: -5px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.single-cryptocurrency-platform-box .content .link-btn:hover {
+  padding-right: 16px;
+}
+
+.owl-item .single-cryptocurrency-platform-box .content {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  margin-top: 30px;
+}
+
+.owl-item.active.center .single-cryptocurrency-platform-box .content {
+  opacity: 1;
+  visibility: visible;
+  margin-top: 0;
+}
+
+.cryptocurrency-platform-slides .owl-nav {
+  max-width: 1320px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+}
+
+.cryptocurrency-platform-slides .owl-nav [class*=owl-] {
+  background-color: transparent !important;
+  margin: 0;
+  position: absolute;
+  line-height: 1;
+  left: 0;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  color: #969696 !important;
+  top: 0;
+  font-size: 31px !important;
+}
+
+.cryptocurrency-platform-slides .owl-nav [class*=owl-].owl-next {
+  left: auto;
+  right: 0;
+}
+
+.cryptocurrency-platform-slides .owl-nav [class*=owl-]:hover {
+  color: var(--mainColor) !important;
+}
+
+.cryptocurrency-platform-slides .owl-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1230px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cryptocurrency-platform-slides .owl-dots .owl-dot {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0%;
+          flex: 1 0 0%;
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.cryptocurrency-platform-slides .owl-dots .owl-dot span {
+  margin: 0;
+  display: block;
+  border-radius: 5px;
+  height: 3px;
+  width: 100%;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  background-color: #d4d4d4;
+}
+
+.cryptocurrency-platform-slides .owl-dots .owl-dot:hover span, .cryptocurrency-platform-slides .owl-dots .owl-dot.active span {
+  background-color: var(--mainColor);
+}
+
+.cryptocurrency-platform-slides .owl-dots .owl-dot:first-child {
+  margin-left: 0;
+}
+
+.cryptocurrency-platform-slides .owl-dots .owl-dot:last-child {
+  margin-right: 0;
+}
+
+/*================================================
+Cryptocurrency Details Area CSS
+=================================================*/
+.cryptocurrency-details-header {
+  margin-bottom: 30px;
+}
+
+.cryptocurrency-details-header .cryptocurrency-market {
+  height: 100%;
+  padding: 30px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: var(--whiteColor);
+  border: 1px solid #eceff1;
+  -webkit-box-shadow: rgba(17, 51, 83, 0.05) 0px 4px 12px 0px;
+          box-shadow: rgba(17, 51, 83, 0.05) 0px 4px 12px 0px;
+}
+
+.cryptocurrency-details-header .cryptocurrency-market ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.cryptocurrency-details-header .cryptocurrency-market ul li {
+  margin-bottom: 30px;
+}
+
+.cryptocurrency-details-header .cryptocurrency-market ul li span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--paragraphColor);
+}
+
+.cryptocurrency-details-header .cryptocurrency-market ul li h4 {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.cryptocurrency-details-header .cryptocurrency-market ul li:last-child {
+  margin-bottom: 0;
+}
+
+.cryptocurrency-details-desc {
+  padding: 30px;
+  border-radius: 5px;
+  background-color: var(--whiteColor);
+  border: 1px solid #eceff1;
+  -webkit-box-shadow: rgba(17, 51, 83, 0.05) 0px 4px 12px 0px;
+          box-shadow: rgba(17, 51, 83, 0.05) 0px 4px 12px 0px;
+}
+
+.cryptocurrency-details-desc h3 {
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.cryptocurrency-details-desc h3:first-child {
+  margin-top: 0;
+}
+
+.cryptocurrency-details-desc .resources-list {
+  margin-top: 30px;
+}
+
+.cryptocurrency-details-desc .resources-list span {
+  display: block;
+  color: var(--paragraphColor);
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.cryptocurrency-details-desc .resources-list ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.cryptocurrency-details-desc .resources-list ul li {
+  margin-bottom: 10px;
+}
+
+.cryptocurrency-details-desc .resources-list ul li a {
+  position: relative;
+  padding-left: 20px;
+  color: var(--mainColor);
+}
+
+.cryptocurrency-details-desc .resources-list ul li a i {
+  color: var(--blackColor);
+  position: absolute;
+  left: 0;
+  top: 1px;
+}
+
+.cryptocurrency-details-desc .resources-list ul li a:hover {
+  color: var(--optionalColor);
+}
+
+.cryptocurrency-details-desc .resources-list ul li:last-child {
+  margin-bottom: 0;
+}
+
+.cryptocurrency-details-desc p a {
+  color: var(--mainColor);
+}
+
+.cryptocurrency-details-desc p a:hover {
+  color: var(--optionalColor);
+}
+
+.cryptocurrency-details-desc p strong {
+  color: var(--blackColor);
+}
+
+.cryptocurrency-details-desc ul li {
+  line-height: 1.8;
+  margin-bottom: 12px;
+  color: var(--paragraphColor);
+}
+
+.cryptocurrency-details-desc ul li strong {
+  color: var(--blackColor);
+}
+
+.cryptocurrency-details-desc ul li:last-child {
+  margin-bottom: 0;
+}
+
+.cryptocurrency-top-stories {
+  padding: 30px;
+  margin-top: 30px;
+  border-radius: 5px;
+  background-color: var(--whiteColor);
+  border: 1px solid #eceff1;
+  -webkit-box-shadow: rgba(17, 51, 83, 0.05) 0px 4px 12px 0px;
+          box-shadow: rgba(17, 51, 83, 0.05) 0px 4px 12px 0px;
+}
+
+.cryptocurrency-top-stories h2 {
+  font-size: 20px;
+  margin-bottom: 35px;
+}
+
+.cryptocurrency-top-stories .single-blog-post .post-content h3 {
+  font-size: 18px;
+}
+
+.cryptocurrency-details-sidebar .buy-cryptocurrency {
+  padding: 30px;
+  border-radius: 5px;
+  background-color: var(--whiteColor);
+  border: 1px solid #eceff1;
+  -webkit-box-shadow: rgba(17, 51, 83, 0.05) 0px 4px 12px 0px;
+          box-shadow: rgba(17, 51, 83, 0.05) 0px 4px 12px 0px;
+}
+
+.cryptocurrency-details-sidebar .buy-cryptocurrency .currency-selection {
+  position: relative;
+}
+
+.cryptocurrency-details-sidebar .buy-cryptocurrency .currency-selection label {
+  color: var(--paragraphColor);
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  font-family: var(--fontFamily2);
+  font-size: 14px;
+}
+
+.cryptocurrency-details-sidebar .buy-cryptocurrency .currency-selection input {
+  width: 100%;
+  height: 70px;
+  border: none;
+  display: block;
+  border-radius: 5px;
+  padding: 20px 0 0 15px;
+  color: var(--blackColor);
+  border: 1px solid #eeeeee;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: var(--fontFamily2);
+}
+
+.cryptocurrency-details-sidebar .buy-cryptocurrency .currency-selection .cryptocurrency {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  margin-top: 0;
+  height: 70px;
+  line-height: 70px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  color: var(--blackColor);
+  border-radius: 0 5px 5px 0;
+  background-color: #eeeeee;
+  padding: 0 30px 0 65px;
+  font-family: var(--fontFamily2);
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.cryptocurrency-details-sidebar .buy-cryptocurrency .currency-selection .cryptocurrency img {
+  width: 30px;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.cryptocurrency-details-sidebar .buy-cryptocurrency .features-list {
+  margin-bottom: 0;
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+.cryptocurrency-details-sidebar .buy-cryptocurrency .features-list li {
+  color: var(--paragraphColor);
+  position: relative;
+  z-index: 1;
+  font-family: var(--fontFamily2);
+  font-size: var(--fontSize);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.cryptocurrency-details-sidebar .buy-cryptocurrency .features-list li i {
+  color: var(--mainColor);
+  width: 24px;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 12px;
+  line-height: 24px;
+  height: 24px;
+  background-color: #eeeeee;
+  font-size: 14px;
+}
+
+.cryptocurrency-details-sidebar .buy-cryptocurrency .features-list li::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: #eeeeee;
+  z-index: -1;
+}
+
+.cryptocurrency-details-sidebar .buy-cryptocurrency .features-list li:nth-child(1) {
+  padding-bottom: 12px;
+}
+
+.cryptocurrency-details-sidebar .buy-cryptocurrency .features-list li:nth-child(2) {
+  padding-top: 0;
+}
+
+.cryptocurrency-details-sidebar .buy-cryptocurrency .features-list li .second-span {
+  margin-left: 20px;
+}
+
+.cryptocurrency-details-sidebar .buy-cryptocurrency .features-list li .first-span {
+  width: 130px;
+}
+
+.cryptocurrency-details-sidebar .buy-cryptocurrency button {
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+  margin-top: 25px;
+  text-align: center;
+  position: relative;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  background-color: var(--optionalColor);
+  color: var(--whiteColor);
+  border: none;
+  padding: 14px 30px;
+  font-family: var(--fontFamily2);
+  font-size: var(--fontSize);
+  font-weight: 600;
+}
+
+.cryptocurrency-details-sidebar .buy-cryptocurrency button i {
+  font-size: 20px;
+  margin-left: -30px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  line-height: 1;
+}
+
+.cryptocurrency-details-sidebar .buy-cryptocurrency button:hover {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+}
+
+.cryptocurrency-details-sidebar .trending-assets {
+  padding: 30px;
+  margin-top: 30px;
+  border-radius: 5px;
+  background-color: var(--whiteColor);
+  border: 1px solid #eceff1;
+  -webkit-box-shadow: rgba(17, 51, 83, 0.05) 0px 4px 12px 0px;
+          box-shadow: rgba(17, 51, 83, 0.05) 0px 4px 12px 0px;
+}
+
+.cryptocurrency-details-sidebar .trending-assets h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.cryptocurrency-details-sidebar .trending-assets ul {
+  padding-left: 0;
+  list-style-type: none;
+  margin-bottom: 0;
+  margin-top: 25px;
+}
+
+.cryptocurrency-details-sidebar .trending-assets ul li {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.cryptocurrency-details-sidebar .trending-assets ul li:last-child {
+  margin-bottom: 0;
+}
+
+.cryptocurrency-details-sidebar .trending-assets ul li .title {
+  position: relative;
+  padding-left: 45px;
+}
+
+.cryptocurrency-details-sidebar .trending-assets ul li .title img {
+  top: 50%;
+  left: 0;
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.cryptocurrency-details-sidebar .trending-assets ul li .title .name {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.cryptocurrency-details-sidebar .trending-assets ul li .title .sub-title {
+  color: var(--paragraphColor);
+  font-size: 14px;
+}
+
+.cryptocurrency-details-sidebar .trending-assets ul li .price {
+  text-align: end;
+}
+
+.cryptocurrency-details-sidebar .trending-assets ul li .price span {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.cryptocurrency-details-sidebar .trending-assets ul li .price .status {
+  color: var(--paragraphColor);
+  margin-bottom: 0;
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.cryptocurrency-details-sidebar .trending-assets ul li .price .status.up {
+  color: #0abf64;
+}
+
+.cryptocurrency-details-sidebar .trending-assets ul li .price .status.down {
+  color: #e65069;
+}
+
+.cryptocurrency-details-sidebar .trending-assets ul li .link-btn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+/*================================================
+Value Trade Area CSS
+=================================================*/
+.value-trade-area {
+  background-color: #f9f9f9;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.value-trade-area .container {
+  max-width: 1400px;
+}
+
+.single-value-trade-box p {
+  line-height: 1;
+  display: inline-block;
+  color: var(--blackColor);
+  font-weight: 700;
+  font-size: 13.5px;
+}
+
+.single-value-trade-box p .price {
+  font-weight: normal;
+  color: var(--paragraphColor);
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.single-value-trade-box p .trending {
+  margin-left: 8px;
+  font-weight: normal;
+  display: inline-block;
+  position: relative;
+  padding-left: 17px;
+}
+
+.single-value-trade-box p .trending i {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+  margin-top: -1.5px;
+  font-size: 20px;
+  line-height: 1;
+  top: 50%;
+  left: 0;
+}
+
+.single-value-trade-box p .trending.up {
+  color: #38837B;
+}
+
+.single-value-trade-box p .trending.down {
+  color: #AC2817;
+}
+
+/*================================================
+Best Seller Cryptocurrency Area CSS
+=================================================*/
+.best-seller-area {
+  background-color: var(--mainColor);
+  position: relative;
+  z-index: 1;
+}
+
+.best-seller-image {
+  text-align: center;
+}
+
+.best-seller-content {
+  top: 40px;
+  position: relative;
+}
+
+.best-seller-content .section-title {
+  text-align: start;
+  max-width: 740px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.best-seller-content .section-title h2 {
+  color: var(--whiteColor);
+}
+
+.best-seller-content .section-title p {
+  color: var(--whiteColor);
+}
+
+.single-cryptocurrency-box {
+  margin-bottom: 30px;
+  border-radius: 5px;
+  background-color: var(--whiteColor);
+  padding: 25px 30px;
+}
+
+.single-cryptocurrency-box img {
+  width: auto !important;
+  display: inline-block !important;
+}
+
+.single-cryptocurrency-box .title {
+  margin-left: 15px;
+}
+
+.single-cryptocurrency-box .title h3 {
+  font-size: 20px;
+}
+
+.single-cryptocurrency-box .title .sub-title {
+  font-size: 14px;
+  display: block;
+  color: var(--paragraphColor);
+}
+
+.single-cryptocurrency-box .title .sub-title span {
+  color: var(--optionalColor);
+}
+
+.single-cryptocurrency-box .btn-box {
+  margin-top: 20px;
+}
+
+.single-cryptocurrency-box .btn-box .link-btn {
+  display: inline-block;
+  background-color: var(--optionalColor);
+  color: var(--whiteColor);
+  border: 1px solid var(--optionalColor);
+  border-radius: 5px;
+  padding: 4px 30px 5px;
+}
+
+.single-cryptocurrency-box .btn-box .link-btn:nth-child(2) {
+  color: var(--optionalColor);
+  background-color: transparent;
+  margin-left: 5px;
+}
+
+.single-cryptocurrency-box .btn-box .link-btn:hover {
+  background-color: var(--mainColor);
+  border-color: var(--mainColor);
+  color: var(--whiteColor);
+}
+
+.cryptocurrency-slides .owl-nav {
+  position: relative;
+  margin-top: 0;
+}
+
+.cryptocurrency-slides .owl-nav [class*=owl-] {
+  background-color: transparent !important;
+  margin: 0;
+  position: absolute;
+  line-height: 1;
+  left: -5px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  color: #cdc7c7 !important;
+  top: -6px;
+  font-size: 25px !important;
+}
+
+.cryptocurrency-slides .owl-nav [class*=owl-].owl-next {
+  left: auto;
+  right: -5px;
+}
+
+.cryptocurrency-slides .owl-nav [class*=owl-]:hover {
+  color: var(--whiteColor) !important;
+}
+
+.cryptocurrency-slides .owl-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 790px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cryptocurrency-slides .owl-dots .owl-dot {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0%;
+          flex: 1 0 0%;
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.cryptocurrency-slides .owl-dots .owl-dot span {
+  margin: 0;
+  display: block;
+  border-radius: 5px;
+  height: 3px;
+  width: 100%;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  background-color: #D4D4D4;
+}
+
+.cryptocurrency-slides .owl-dots .owl-dot:hover span, .cryptocurrency-slides .owl-dots .owl-dot.active span {
+  background-color: var(--whiteColor);
+}
+
+.cryptocurrency-slides .owl-dots .owl-dot:first-child {
+  margin-left: 0;
+}
+
+.cryptocurrency-slides .owl-dots .owl-dot:last-child {
+  margin-right: 0;
+}
+
+.cryptocurrency-table table {
+  margin-bottom: 0;
+}
+
+.cryptocurrency-table table thead tr {
+  border: none;
+}
+
+.cryptocurrency-table table thead tr th {
+  border: none;
+  padding: 15px 30px 10px;
+  vertical-align: middle;
+  color: var(--paragraphColor);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.cryptocurrency-table table tbody tr {
+  background-color: var(--whiteColor);
+  border-bottom: 2px solid #fffbf1;
+}
+
+.cryptocurrency-table table tbody tr td {
+  border: none;
+  font-size: 18px;
+  padding: 20px 30px;
+  vertical-align: middle;
+  color: var(--blackColor);
+}
+
+.cryptocurrency-table table tbody tr td h3 {
+  margin-left: 15px;
+  font-size: 18px;
+}
+
+.cryptocurrency-table table tbody tr td .trending {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: var(--fontFamily2);
+}
+
+.cryptocurrency-table table tbody tr td .trending.up {
+  color: #00a79d;
+}
+
+.cryptocurrency-table table tbody tr td .trending.down {
+  color: #c60000;
+}
+
+.cryptocurrency-table table tbody tr td .link-btn {
+  display: inline-block;
+  background-color: var(--optionalColor);
+  color: var(--whiteColor);
+  border-radius: 5px;
+  padding: 9px 35px 8px;
+  font-family: var(--fontFamily2);
+  font-weight: 600;
+  font-size: 14.5px;
+}
+
+.cryptocurrency-table table tbody tr td .link-btn:hover {
+  color: var(--whiteColor);
+  background-color: var(--mainColor);
+}
+
+.more-cryptocurrency-box {
+  margin-top: 40px;
+}
+
+.single-cryptocurrency-item {
+  -webkit-box-shadow: 0 7px 30px -10px rgba(133, 153, 162, 0.3);
+          box-shadow: 0 7px 30px -10px rgba(133, 153, 162, 0.3);
+  background-color: var(--whiteColor);
+  margin-bottom: 30px;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.single-cryptocurrency-item img {
+  width: auto !important;
+  display: inline-block !important;
+}
+
+.single-cryptocurrency-item .title {
+  margin-left: 15px;
+}
+
+.single-cryptocurrency-item .title h3 {
+  font-size: 20px;
+}
+
+.single-cryptocurrency-item .title .sub-title {
+  font-size: 14px;
+  display: block;
+  color: var(--paragraphColor);
+}
+
+.single-cryptocurrency-item .title .sub-title span {
+  color: var(--optionalColor);
+}
+
+.single-cryptocurrency-item .btn-box {
+  margin-top: 25px;
+}
+
+.single-cryptocurrency-item .btn-box .link-btn {
+  background-color: var(--optionalColor);
+  border: 1px solid var(--optionalColor);
+  color: var(--whiteColor);
+  display: inline-block;
+  padding: 4px 25px 5px;
+  border-radius: 30px;
+}
+
+.single-cryptocurrency-item .btn-box .link-btn:nth-child(2) {
+  background-color: transparent;
+  color: var(--optionalColor);
+  margin-left: 8px;
+}
+
+.single-cryptocurrency-item .btn-box .link-btn:nth-child(3) {
+  background-color: var(--mainColor);
+  border-color: var(--mainColor);
+  color: var(--whiteColor);
+  margin-left: 8px;
+}
+
+.single-cryptocurrency-item .btn-box .link-btn:nth-child(3):hover {
+  background-color: var(--blackColor);
+  border-color: var(--blackColor);
+}
+
+.single-cryptocurrency-item .btn-box .link-btn:hover {
+  background-color: var(--mainColor);
+  border-color: var(--mainColor);
+  color: var(--whiteColor);
+}
+
+/*================================================
+Feedback Area CSS
+=================================================*/
+.single-feedback-box {
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.single-feedback-box .rating {
+  margin-bottom: 20px;
+}
+
+.single-feedback-box .rating img {
+  display: inline-block;
+  margin-right: 5px;
+  width: 24px;
+}
+
+.single-feedback-box p {
+  color: var(--blackColor);
+  font-size: 18px;
+  font-family: var(--fontFamily2);
+}
+
+.single-feedback-box .client-info {
+  margin-top: 22px;
+}
+
+.single-feedback-box .client-info img {
+  width: 60px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.single-feedback-box .client-info .title {
+  margin-left: 15px;
+}
+
+.single-feedback-box .client-info .title h3 {
+  margin-bottom: 3px;
+  color: var(--mainColor);
+  font-size: 16px;
+}
+
+.single-feedback-box .client-info .title span {
+  color: var(--paragraphColor);
+  font-size: 14.5px;
+}
+
+.single-feedback-box::before {
+  content: "\edd8";
+  line-height: 1;
+  color: var(--blackColor);
+  opacity: .04;
+  position: absolute;
+  right: -10px;
+  top: -20px;
+  font-family: 'boxicons';
+  font-size: 120px;
+}
+
+.single-feedback-item {
+  background-color: #f9f9f9;
+  margin-bottom: 30px;
+  position: relative;
+  padding: 30px;
+  z-index: 1;
+}
+
+.single-feedback-item .rating {
+  margin-bottom: 15px;
+}
+
+.single-feedback-item .rating i {
+  line-height: 1;
+  color: orange;
+  font-size: 18px;
+  display: inline-block;
+}
+
+.single-feedback-item p {
+  color: var(--blackColor);
+  font-size: 16px;
+  font-family: var(--fontFamily2);
+}
+
+.single-feedback-item .client-info {
+  margin-top: 22px;
+}
+
+.single-feedback-item .client-info img {
+  width: 60px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.single-feedback-item .client-info .title {
+  margin-left: 15px;
+}
+
+.single-feedback-item .client-info .title h3 {
+  margin-bottom: 3px;
+  font-size: 16px;
+}
+
+.single-feedback-item .client-info .title span {
+  color: var(--mainColor);
+  font-size: 14.5px;
+}
+
+.single-feedback-item::before {
+  content: "\edd8";
+  line-height: 1;
+  color: var(--blackColor);
+  opacity: .04;
+  position: absolute;
+  right: -10px;
+  top: -20px;
+  font-family: 'boxicons';
+  font-size: 120px;
+}
+
+.feedback-slides .owl-nav {
+  max-width: 1320px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+}
+
+.feedback-slides .owl-nav [class*=owl-] {
+  background-color: transparent !important;
+  margin: 0;
+  position: absolute;
+  line-height: 1;
+  left: 0;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  color: #969696 !important;
+  top: 0;
+  font-size: 31px !important;
+}
+
+.feedback-slides .owl-nav [class*=owl-].owl-next {
+  left: auto;
+  right: 0;
+}
+
+.feedback-slides .owl-nav [class*=owl-]:hover {
+  color: var(--mainColor) !important;
+}
+
+.feedback-slides .owl-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1220px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feedback-slides .owl-dots .owl-dot {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0%;
+          flex: 1 0 0%;
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.feedback-slides .owl-dots .owl-dot span {
+  margin: 0;
+  display: block;
+  border-radius: 5px;
+  height: 3px;
+  width: 100%;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  background-color: #d4d4d4;
+}
+
+.feedback-slides .owl-dots .owl-dot:hover span, .feedback-slides .owl-dots .owl-dot.active span {
+  background-color: var(--mainColor);
+}
+
+.feedback-slides .owl-dots .owl-dot:first-child {
+  margin-left: 0;
+}
+
+.feedback-slides .owl-dots .owl-dot:last-child {
+  margin-right: 0;
+}
+
+/*================================================
+Tokens Area CSS
+=================================================*/
+.tokens-image {
+  padding-right: 15px;
+}
+
+.tokens-content {
+  padding-left: 15px;
+}
+
+.tokens-content h2 {
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.tokens-content p {
+  max-width: 580px;
+}
+
+.tokens-content #countdown {
+  margin-top: 25px;
+}
+
+.tokens-content #countdown ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.tokens-content #countdown ul li {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  color: var(--paragraphColor);
+  margin-right: 40px;
+}
+
+.tokens-content #countdown ul li span {
+  display: block;
+  border: 1px solid #bdf5fb;
+  width: 87px;
+  border-radius: 5px;
+  height: 87px;
+  color: var(--blackColor);
+  margin-bottom: 12px;
+  line-height: 87px;
+  font-size: 34px;
+  font-weight: 700;
+  font-family: var(--fontFamily2);
+}
+
+.tokens-content #countdown ul li::before {
+  content: ':';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: -23px;
+  margin-top: -18px;
+  color: var(--paragraphColor);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.tokens-content #countdown ul li:last-child {
+  margin-right: 0;
+}
+
+.tokens-content #countdown ul li:last-child::before {
+  display: none;
+}
+
+.tokens-content .token-price {
+  background-color: #f9f9f9;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 15px 30px;
+  margin-top: 30px;
+}
+
+.tokens-content .token-price .box span {
+  display: block;
+  color: var(--paragraphColor);
+  margin-bottom: 8px;
+}
+
+.tokens-content .token-price .box h3 {
+  margin-bottom: 0;
+  font-size: 18px;
+}
+
+.tokens-content .token-price .box:last-child {
+  margin-left: 100px;
+}
+
+.tokens-content .token-price .box:last-child div {
+  position: relative;
+  padding-left: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: var(--fontFamily2);
+}
+
+.tokens-content .token-price .box:last-child div img {
+  width: 15px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-right: 5px;
+}
+
+.tokens-content .total-price {
+  margin-top: 20px;
+}
+
+.tokens-content .total-price span {
+  color: var(--paragraphColor);
+}
+
+.tokens-content .total-price span span {
+  color: var(--blackColor);
+  position: relative;
+  margin-left: 30px;
+  top: 1px;
+  font-family: var(--fontFamily2);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.tokens-content .btn-box {
+  margin-top: 25px;
+}
+
+.tokens-content .btn-box .default-btn {
+  background-color: var(--optionalColor);
+}
+
+.tokens-content .btn-box .default-btn:hover {
+  background-color: var(--blackColor);
+}
+
+.tokens-content .btn-box .default-btn:nth-child(2) {
+  margin-left: 15px;
+  background-color: var(--mainColor);
+}
+
+.tokens-content .btn-box .default-btn:nth-child(2):hover {
+  background-color: var(--blackColor);
+}
+
+.tokens-content .payment-methods {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tokens-content .payment-methods img {
+  margin-right: 10px;
+}
+
+.tokens-content .payment-methods img:last-child {
+  margin-right: 0;
+}
+
+/*================================================
+Portfolio Area CSS
+=================================================*/
+.portfolio-area.bg-f9f9f9 {
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-area.bg-f9f9f9::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 90px;
+  background-color: var(--whiteColor);
+  z-index: -1;
+}
+
+.portfolio-area.bg-f9f9f9::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  background-color: var(--whiteColor);
+  z-index: -1;
+}
+
+.portfolio-area.bg-fff0ee {
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-area.bg-fff0ee::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 90px;
+  background-color: var(--whiteColor);
+  z-index: -1;
+}
+
+.portfolio-area.bg-fff0ee::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  background-color: var(--whiteColor);
+  z-index: -1;
+}
+
+.portfolio-area.bg-main-color {
+  background-color: var(--mainColor);
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-area.bg-main-color::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 90px;
+  background-color: var(--whiteColor);
+  z-index: -1;
+}
+
+.portfolio-area.bg-main-color::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  background-color: var(--whiteColor);
+  z-index: -1;
+}
+
+.single-portfolio-item .content h3 {
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+.single-portfolio-item.color-white .content h3 {
+  color: var(--whiteColor);
+}
+
+.single-portfolio-item.color-white .content p {
+  color: var(--whiteColor);
+}
+
+.single-portfolio-item.color-white .content-slides .owl-nav [class*=owl-] {
+  color: #bebebe !important;
+}
+
+.single-portfolio-item.color-white .content-slides .owl-nav [class*=owl-]:hover {
+  color: var(--whiteColor) !important;
+}
+
+.single-portfolio-item.color-white .content-slides .owl-dots .owl-dot span {
+  background-color: #bebebe;
+}
+
+.single-portfolio-item.color-white .content-slides .owl-dots .owl-dot:hover span, .single-portfolio-item.color-white .content-slides .owl-dots .owl-dot.active span {
+  background-color: var(--whiteColor);
+}
+
+.content-slides {
+  position: relative;
+  top: 40px;
+}
+
+.content-slides .content {
+  margin-bottom: 35px;
+}
+
+.content-slides .owl-nav {
+  margin-top: 0;
+  max-width: 230px;
+  position: relative;
+}
+
+.content-slides .owl-nav [class*=owl-] {
+  background-color: transparent !important;
+  margin: 0;
+  position: absolute;
+  line-height: 1;
+  left: -5px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  color: #969696 !important;
+  top: -20px;
+  font-size: 31px !important;
+}
+
+.content-slides .owl-nav [class*=owl-].owl-next {
+  left: auto;
+  right: -5px;
+}
+
+.content-slides .owl-nav [class*=owl-]:hover {
+  color: var(--mainColor) !important;
+}
+
+.content-slides .owl-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 170px;
+  margin-top: 0;
+  margin-left: 30px;
+}
+
+.content-slides .owl-dots .owl-dot {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0%;
+          flex: 1 0 0%;
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.content-slides .owl-dots .owl-dot span {
+  margin: 0;
+  display: block;
+  border-radius: 5px;
+  height: 3px;
+  width: 100%;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  background-color: #d4d4d4;
+}
+
+.content-slides .owl-dots .owl-dot:hover span, .content-slides .owl-dots .owl-dot.active span {
+  background-color: var(--mainColor);
+}
+
+.content-slides .owl-dots .owl-dot:first-child {
+  margin-left: 0;
+}
+
+.content-slides .owl-dots .owl-dot:last-child {
+  margin-right: 0;
+}
+
+/*================================================
+Market Health Area CSS
+=================================================*/
+.market-health-area {
+  border-top: 1px solid #eeeeee;
+}
+
+.market-health-list {
+  gap: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 0;
+  list-style-type: none;
+  background-color: #eeeeee;
+  border: 1px solid #eeeeee;
+  border-right-width: 0;
+}
+
+.market-health-list li {
+  background-color: var(--whiteColor);
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 24.94%;
+  padding: 30px;
+}
+
+.market-health-list li h3 {
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+
+.market-health-list li .title {
+  position: relative;
+  padding-left: 45px;
+}
+
+.market-health-list li .title img {
+  top: 50%;
+  left: 0;
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.market-health-list li .title .name {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.market-health-list li .title .status {
+  color: var(--paragraphColor);
+  font-size: 14px;
+  display: block;
+}
+
+.market-health-list li .title .status.up {
+  color: #0abf64;
+}
+
+.market-health-list li .title .status.down {
+  color: #e65069;
+}
+
+.market-health-list li .price {
+  text-align: end;
+}
+
+.market-health-list li .price span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/*================================================
+Features Area CSS
+=================================================*/
+.single-features-box {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.single-features-box img {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  margin-bottom: 20px;
+}
+
+.single-features-box h3 {
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.single-features-box p {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.single-features-box:hover img {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.features-box {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.features-box .icon {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  background-color: #ddf9fc;
+  -webkit-animation: border-transform 10s linear infinite alternate forwards;
+          animation: border-transform 10s linear infinite alternate forwards;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.features-box .icon img {
+  left: 0;
+  right: 0;
+  top: 50%;
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.features-box .icon.bg-ffefc7 {
+  background-color: #ffefc7;
+}
+
+.features-box .icon.bg-ffc9c2 {
+  background-color: #ffc9c2;
+}
+
+.features-box h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.features-box p {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.single-features-item {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.single-features-item .icon {
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
+  line-height: 80px;
+  border-radius: 5px;
+  color: var(--whiteColor);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  background-color: var(--optionalColor);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+
+.single-features-item .icon.bg-F87100 {
+  background-color: #F87100;
+}
+
+.single-features-item .icon.bg-5466f9 {
+  background-color: #5466f9;
+}
+
+.single-features-item .icon.bg-FF9900 {
+  background-color: #FF9900;
+}
+
+.single-features-item .icon.bg-cc00ff {
+  background-color: #cc00ff;
+}
+
+.single-features-item h3 {
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.single-features-item p {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.single-features-item:hover .icon {
+  border-radius: 50%;
+}
+
+/*================================================
+App Download Area CSS
+=================================================*/
+.app-download-area {
+  position: relative;
+  z-index: 1;
+}
+
+.app-download-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  bottom: 0;
+  height: 45px;
+  background-color: var(--whiteColor);
+}
+
+.app-download-area::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  top: 0;
+  height: 90px;
+  background-color: var(--whiteColor);
+}
+
+.app-download-image {
+  text-align: center;
+}
+
+.app-download-image img {
+  -webkit-animation: movebounce 7s linear infinite;
+          animation: movebounce 7s linear infinite;
+}
+
+.app-download-content {
+  position: relative;
+  top: 30px;
+}
+
+.app-download-content h2 {
+  margin-bottom: 15px;
+  font-size: 34px;
+}
+
+.app-download-content p {
+  max-width: 540px;
+}
+
+.app-download-content .btn-box {
+  margin-top: 30px;
+}
+
+.app-download-content .btn-box .playstore-btn {
+  position: relative;
+  border-radius: 5px;
+  margin-right: 15px;
+  display: inline-block;
+  color: var(--blackColor);
+  background-color: var(--whiteColor);
+  -webkit-box-shadow: 0 7px 18px 0 rgba(107, 124, 147, 0.15);
+          box-shadow: 0 7px 18px 0 rgba(107, 124, 147, 0.15);
+  font-size: 14px;
+  font-weight: 500;
+  padding-top: 12px;
+  padding-left: 60px;
+  padding-right: 25px;
+  padding-bottom: 12px;
+}
+
+.app-download-content .btn-box .playstore-btn span {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.app-download-content .btn-box .playstore-btn img {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+  left: 20px;
+  top: 50%;
+}
+
+.app-download-content .btn-box .playstore-btn:hover {
+  background-color: var(--blackColor);
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  color: var(--whiteColor);
+}
+
+.app-download-content .btn-box .applestore-btn {
+  position: relative;
+  border-radius: 5px;
+  display: inline-block;
+  color: var(--blackColor);
+  background-color: var(--whiteColor);
+  -webkit-box-shadow: 0 7px 18px 0 rgba(107, 124, 147, 0.15);
+          box-shadow: 0 7px 18px 0 rgba(107, 124, 147, 0.15);
+  font-size: 14px;
+  font-weight: 500;
+  padding-top: 12px;
+  padding-left: 65px;
+  padding-right: 25px;
+  padding-bottom: 12px;
+}
+
+.app-download-content .btn-box .applestore-btn span {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.app-download-content .btn-box .applestore-btn img {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+  left: 20px;
+  top: 50%;
+}
+
+.app-download-content .btn-box .applestore-btn:hover {
+  background-color: var(--blackColor);
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  color: var(--whiteColor);
+}
+
+@-webkit-keyframes movebounce {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes movebounce {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes moveleftbounce {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  50% {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes moveleftbounce {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  50% {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes border-transform {
+  0%, 100% {
+    border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+  }
+  14% {
+    border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%;
+  }
+  28% {
+    border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;
+  }
+  42% {
+    border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
+  }
+  56% {
+    border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
+  }
+  70% {
+    border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
+  }
+  84% {
+    border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
+  }
+}
+
+@keyframes border-transform {
+  0%, 100% {
+    border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+  }
+  14% {
+    border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%;
+  }
+  28% {
+    border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;
+  }
+  42% {
+    border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
+  }
+  56% {
+    border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
+  }
+  70% {
+    border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
+  }
+  84% {
+    border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
+  }
+}
+
+@-webkit-keyframes rotate3d {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes rotate3d {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@-webkit-keyframes movescale {
+  0% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+}
+
+@keyframes movescale {
+  0% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+}
+
+/*================================================
+Wallet Area CSS
+=================================================*/
+.wallet-content {
+  padding-right: 15px;
+}
+
+.wallet-content h2 {
+  margin-bottom: 20px;
+  font-size: 34px;
+}
+
+.wallet-content .default-btn {
+  margin-top: 10px;
+}
+
+.wallet-image {
+  padding-left: 15px;
+}
+
+.wallet-tabs {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wallet-tabs .nav-tabs {
+  border: none;
+  margin-bottom: 0;
+  padding-left: 15px;
+  list-style-type: none;
+  display: block;
+}
+
+.wallet-tabs .nav-tabs .nav-item {
+  margin-bottom: 30px;
+}
+
+.wallet-tabs .nav-tabs .nav-item .nav-link {
+  margin-bottom: 0;
+  border: none;
+  padding: 0;
+  padding-left: 50px;
+  position: relative;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.wallet-tabs .nav-tabs .nav-item .nav-link i {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f9f9f9;
+  line-height: 40px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.wallet-tabs .nav-tabs .nav-item .nav-link.active i {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+}
+
+.wallet-tabs .nav-tabs .nav-item:lats-child {
+  margin-bottom: 0;
+}
+
+.wallet-tabs .tab-pane {
+  padding-right: 15px;
+}
+
+.wallet-tabs .tab-pane .box {
+  padding: 40px;
+  border-radius: 5px;
+  background-color: var(--whiteColor);
+  -webkit-box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.09);
+          box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.09);
+}
+
+.wallet-tabs .tab-pane .box h3 {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.wallet-tabs .tab-pane .box p {
+  margin-bottom: 20px;
+}
+
+.wallet-tabs .tab-pane .box .features-list {
+  padding-left: 0;
+  margin-bottom: 30px;
+  list-style-type: none;
+}
+
+.wallet-tabs .tab-pane .box .features-list li {
+  margin-bottom: 12px;
+  font-size: 17px;
+  padding-left: 25px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.wallet-tabs .tab-pane .box .features-list li i {
+  position: absolute;
+  left: -5px;
+  color: var(--mainColor);
+  top: 0;
+  font-size: 26px;
+}
+
+.wallet-tabs .tab-pane .box .features-list li:last-child {
+  margin-bottom: 0;
+}
+
+/*================================================
+Advisor Area CSS
+=================================================*/
+.single-advisor-box {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.single-advisor-box .image {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  border: 1px solid #eeeeee;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.single-advisor-box .image img {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.single-advisor-box .content {
+  margin-top: 25px;
+}
+
+.single-advisor-box .content h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.single-advisor-box .content span {
+  display: block;
+  color: var(--mainColor);
+}
+
+.single-advisor-box:hover .image {
+  border-color: transparent;
+}
+
+.single-advisor-box:hover .image img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+/*================================================
+Account Register Area CSS
+=================================================*/
+.account-register-area {
+  position: relative;
+  z-index: 1;
+}
+
+.account-register-content {
+  text-align: center;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.account-register-content h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.account-register-content p {
+  font-size: 16px;
+}
+
+.account-register-content .default-btn {
+  margin-top: 10px;
+}
+
+.shape6 {
+  position: absolute;
+  z-index: -1;
+  left: 22%;
+  top: 10%;
+}
+
+.shape6 img {
+  -webkit-animation: moveleftbounce 5s linear infinite;
+          animation: moveleftbounce 5s linear infinite;
+}
+
+.shape7 {
+  position: absolute;
+  z-index: -1;
+  bottom: 20%;
+  left: 25%;
+}
+
+.shape7 img {
+  -webkit-animation: rotate3d 4s linear infinite;
+          animation: rotate3d 4s linear infinite;
+}
+
+.shape8 {
+  position: absolute;
+  z-index: -1;
+  right: 15%;
+  top: 12%;
+}
+
+.shape8 img {
+  -webkit-animation: movescale 3s linear infinite;
+          animation: movescale 3s linear infinite;
+}
+
+.shape9 {
+  position: absolute;
+  z-index: -1;
+  right: 20%;
+  bottom: 0;
+}
+
+.shape9 img {
+  -webkit-animation: moveleftbounce 5s linear infinite;
+          animation: moveleftbounce 5s linear infinite;
+}
+
+.shape10 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shape11 {
+  position: absolute;
+  opacity: .50;
+  z-index: -2;
+  right: 5%;
+  top: 12%;
+}
+
+.shape11 img {
+  -webkit-animation: moveleftbounce 5s linear infinite;
+          animation: moveleftbounce 5s linear infinite;
+}
+
+.shape12 {
+  position: absolute;
+  opacity: .50;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+
+.shape12 img {
+  -webkit-animation: movebounce 5s linear infinite;
+          animation: movebounce 5s linear infinite;
+}
+
+.shape13 {
+  position: absolute;
+  text-align: center;
+  opacity: .50;
+  z-index: -1;
+  right: 0;
+  top: 12%;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shape14 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  z-index: -1;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center;
+}
+
+@-webkit-keyframes rotateme {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateme {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/*================================================
+Reigster Area CSS
+=================================================*/
+.cta-area {
+  background-color: var(--mainColor);
+  position: relative;
+  z-index: 1;
+}
+
+.cta-area .shape6 {
+  left: 16%;
+  top: 12%;
+}
+
+.cta-area .shape7 {
+  bottom: 12%;
+  left: 23%;
+}
+
+.cta-area .shape8 {
+  right: 48%;
+  top: 22%;
+}
+
+.cta-area .shape9 {
+  right: 55%;
+}
+
+.cta-area.bg-gradient-image {
+  background-image: url(../images/bg4.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cta-area.bg-gradient-image .shape15 {
+  opacity: .15;
+}
+
+.cta-area.bg-gradient-image .cta-image::before {
+  opacity: .03;
+}
+
+.cta-content {
+  color: var(--whiteColor);
+  position: relative;
+  top: -50px;
+}
+
+.cta-content h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
+  color: var(--whiteColor);
+}
+
+.cta-content p {
+  font-size: 16px;
+  max-width: 570px;
+  color: var(--whiteColor);
+}
+
+.cta-content .default-btn {
+  margin-top: 10px;
+  background-color: var(--optionalColor);
+  color: var(--whiteColor);
+}
+
+.cta-content .default-btn:hover {
+  background-color: var(--whiteColor);
+  color: var(--blackColor);
+}
+
+.cta-content.black-text {
+  color: var(--blackColor);
+}
+
+.cta-content.black-text h2 {
+  color: var(--blackColor);
+}
+
+.cta-content.black-text p {
+  color: var(--paragraphColor);
+}
+
+.cta-image {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cta-image::before {
+  left: 0;
+  right: 0;
+  content: '';
+  opacity: .10;
+  width: 590px;
+  z-index: -1;
+  bottom: -50px;
+  height: 590px;
+  position: absolute;
+  margin: auto;
+  background-color: var(--blackColor);
+  -webkit-animation: border-transform 10s linear infinite alternate forwards;
+          animation: border-transform 10s linear infinite alternate forwards;
+}
+
+.shape15 {
+  left: 2%;
+  bottom: 0;
+  z-index: -2;
+  position: absolute;
+}
+
+@keyframes border-transform {
+  0%, 100% {
+    border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+  }
+  14% {
+    border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%;
+  }
+  28% {
+    border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;
+  }
+  42% {
+    border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
+  }
+  56% {
+    border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
+  }
+  70% {
+    border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
+  }
+  84% {
+    border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
+  }
+}
+
+/*================================================
+Data Table Area CSS
+=================================================*/
+.cryptocurrency-data-table .dataTables_length {
+  margin-bottom: 30px;
+  color: var(--paragraphColor);
+}
+
+.cryptocurrency-data-table .dataTables_length label {
+  display: block;
+}
+
+.cryptocurrency-data-table .dataTables_length select {
+  cursor: pointer;
+  padding: 4px ​10px !important;
+  border: 1px solid #eeeeee;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.cryptocurrency-data-table #myTable_filter {
+  margin-bottom: 30px;
+  color: var(--paragraphColor);
+}
+
+.cryptocurrency-data-table #myTable_filter label {
+  display: block;
+}
+
+.cryptocurrency-data-table #myTable_filter input {
+  border-color: #eeeeee;
+  margin-left: 10px;
+  height: 40px;
+  padding: 0 0 0 10px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.cryptocurrency-data-table #myTable_filter input:focus {
+  border-color: var(--mainColor);
+}
+
+.cryptocurrency-data-table .dataTable {
+  margin-bottom: 0;
+  border: 1px solid #eeeeee !important;
+}
+
+.cryptocurrency-data-table .dataTable.no-footer {
+  border: none;
+}
+
+.cryptocurrency-data-table .dataTable thead tr {
+  border: none;
+}
+
+.cryptocurrency-data-table .dataTable thead tr th {
+  border: none;
+  text-align: end;
+  padding: 12px 30px;
+  vertical-align: middle;
+  color: var(--blackColor);
+  border-bottom: 1px solid #eeeeee;
+  font-size: var(--fontSize);
+  font-weight: 600;
+}
+
+.cryptocurrency-data-table .dataTable thead tr th:first-child {
+  text-align: start;
+}
+
+.cryptocurrency-data-table .dataTable thead .sorting_asc {
+  background-image: url(../images/sort_asc.png) !important;
+}
+
+.cryptocurrency-data-table .dataTable thead .sorting_desc {
+  background-image: url(../images/sort_desc.png) !important;
+}
+
+.cryptocurrency-data-table .dataTable thead .sorting {
+  background-image: url(../images/sort_both.png);
+}
+
+.cryptocurrency-data-table .dataTable thead .sorting_disabled {
+  background-image: unset !important;
+}
+
+.cryptocurrency-data-table .dataTable tbody {
+  background-color: transparent !important;
+}
+
+.cryptocurrency-data-table .dataTable tbody tr {
+  background-color: transparent !important;
+}
+
+.cryptocurrency-data-table .dataTable tbody tr td {
+  border: none;
+  text-align: end;
+  font-size: 16px;
+  padding: 12px 30px;
+  vertical-align: middle;
+  color: var(--paragraphColor);
+  background-color: transparent !important;
+}
+
+.cryptocurrency-data-table .dataTable tbody tr td h3 {
+  margin-left: 12px;
+  font-size: var(--fontSize);
+  font-weight: 600;
+}
+
+.cryptocurrency-data-table .dataTable tbody tr td h3 span {
+  font-weight: normal;
+  color: var(--paragraphColor);
+  margin-left: 5px;
+}
+
+.cryptocurrency-data-table .dataTable tbody tr td img {
+  border-radius: 50%;
+}
+
+.cryptocurrency-data-table .dataTable tbody tr td .trending {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--fontFamily2);
+}
+
+.cryptocurrency-data-table .dataTable tbody tr td .trending.up {
+  color: #0abf64;
+}
+
+.cryptocurrency-data-table .dataTable tbody tr td .trending.down {
+  color: #e65069;
+}
+
+.cryptocurrency-data-table .dataTable tbody tr td .link-btn {
+  display: inline-block;
+  background-color: var(--optionalColor);
+  color: var(--whiteColor);
+  border-radius: 5px;
+  padding: 9px 35px 8px;
+  font-family: var(--fontFamily2);
+  font-weight: 600;
+  font-size: 14.5px;
+}
+
+.cryptocurrency-data-table .dataTable tbody tr td .link-btn:hover {
+  color: var(--whiteColor);
+  background-color: var(--mainColor);
+}
+
+.cryptocurrency-data-table .dataTable tbody tr td:first-child {
+  text-align: start;
+}
+
+.cryptocurrency-data-table .dataTable tbody tr:nth-of-type(even) {
+  background-color: #f9f9f9 !important;
+}
+
+.cryptocurrency-data-table .dataTable tbody tr:nth-of-type(even) td img {
+  border: 1px solid #eeeeee;
+}
+
+.cryptocurrency-data-table .dataTables_info {
+  color: var(--paragraphColor);
+  margin-top: 20px;
+}
+
+.cryptocurrency-data-table .dataTables_wrapper .dataTables_paginate {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cryptocurrency-data-table .dataTables_wrapper .dataTables_paginate span {
+  display: inline-block;
+}
+
+.cryptocurrency-data-table .dataTables_wrapper .dataTables_paginate span .paginate_button {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  width: 35px;
+  height: 35px;
+  color: var(--paragraphColor) !important;
+  background: transparent;
+  border-color: transparent;
+  -webkit-box-shadow: unset !important;
+          box-shadow: unset !important;
+  padding: 0;
+  border-radius: 50%;
+  transition: var(--transition);
+  line-height: 32px;
+  font-size: var(--fontSize);
+  font-weight: 700;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.cryptocurrency-data-table .dataTables_wrapper .dataTables_paginate span .paginate_button:hover {
+  border-color: #eceff1;
+  background: transparent;
+  color: var(--mainColor) !important;
+}
+
+.cryptocurrency-data-table .dataTables_wrapper .dataTables_paginate span .paginate_button.current {
+  background: var(--mainColor);
+  color: var(--whiteColor) !important;
+  border-color: var(--mainColor) !important;
+}
+
+.cryptocurrency-data-table .dataTables_wrapper .dataTables_paginate .paginate_button.previous {
+  font-size: 0;
+  width: 35px;
+  position: relative;
+  margin-right: 3px;
+  height: 35px;
+  color: var(--paragraphColor);
+  border-radius: 50%;
+  border: 1px solid #eeeeee;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.cryptocurrency-data-table .dataTables_wrapper .dataTables_paginate .paginate_button.previous:hover {
+  background: transparent;
+  color: var(--mainColor) !important;
+  border-color: #eceff1;
+}
+
+.cryptocurrency-data-table .dataTables_wrapper .dataTables_paginate .paginate_button.previous.disabled {
+  pointer-events: none;
+  opacity: .5 !important;
+}
+
+.cryptocurrency-data-table .dataTables_wrapper .dataTables_paginate .paginate_button.previous::before {
+  content: "\e9af";
+  font-family: 'boxicons';
+  position: absolute;
+  left: 0;
+  font-size: 22px;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.cryptocurrency-data-table .dataTables_wrapper .dataTables_paginate .paginate_button.next {
+  font-size: 0;
+  width: 35px;
+  height: 35px;
+  margin-left: 3px;
+  color: var(--paragraphColor);
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid #eeeeee;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.cryptocurrency-data-table .dataTables_wrapper .dataTables_paginate .paginate_button.next:hover {
+  background: transparent;
+  color: var(--mainColor) !important;
+  border-color: #eceff1;
+}
+
+.cryptocurrency-data-table .dataTables_wrapper .dataTables_paginate .paginate_button.next.disabled {
+  pointer-events: none;
+  opacity: .5 !important;
+}
+
+.cryptocurrency-data-table .dataTables_wrapper .dataTables_paginate .paginate_button.next::before {
+  content: "\e9b2";
+  font-family: 'boxicons';
+  position: absolute;
+  left: 0;
+  font-size: 22px;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+/*================================================
+Earn Money Area CSS
+=================================================*/
+.earn-money-list {
+  margin-bottom: 40px;
+}
+
+.earn-money-list h3 {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.earn-money-list ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.earn-money-list ul li {
+  position: relative;
+  margin-bottom: 45px;
+  color: var(--paragraphColor);
+  font-size: 17px;
+  padding-left: 65px;
+}
+
+.earn-money-list ul li i {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  text-align: center;
+  font-size: 30px;
+  -webkit-box-shadow: rgba(218, 225, 233, 0.4) 0px 8px 16px;
+          box-shadow: rgba(218, 225, 233, 0.4) 0px 8px 16px;
+  top: 50%;
+  color: var(--mainColor);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: var(--whiteColor);
+  border-radius: 50%;
+  line-height: 50px;
+}
+
+.earn-money-list ul li:last-child {
+  margin-bottom: 0;
+}
+
+/*================================================
+Page Title Area CSS
+=================================================*/
+.page-title-area {
+  background: -webkit-gradient(linear, left bottom, left top, from(#0062ff), to(#081587));
+  background: linear-gradient(0deg, #0062ff, #081587);
+  position: relative;
+  z-index: 1;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.page-title-content {
+  text-align: center;
+}
+
+.page-title-content h1 {
+  font-size: 40px;
+  margin-bottom: 0;
+  color: var(--whiteColor);
+}
+
+.page-title-content p {
+  color: var(--whiteColor);
+  margin-top: 15px;
+  font-size: 18px;
+  opacity: .8;
+}
+
+.page-title-content .default-btn {
+  margin-top: 15px;
+  color: var(--whiteColor);
+  background-color: var(--optionalColor);
+}
+
+.page-title-content .default-btn:hover {
+  background-color: var(--whiteColor);
+  color: var(--blackColor);
+}
+
+.lines {
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 90vw;
+  z-index: -1;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+}
+
+.lines .line {
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.lines .line::after {
+  left: 0;
+  top: -50%;
+  width: 100%;
+  content: "";
+  height: 15vh;
+  display: block;
+  position: absolute;
+  -webkit-animation: run 7s 0s infinite;
+          animation: run 7s 0s infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+          animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(75%, var(--whiteColor)), to(var(--whiteColor)));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--whiteColor) 75%, var(--whiteColor) 100%);
+}
+
+.lines .line:nth-child(1) {
+  margin-left: -35%;
+}
+
+.lines .line:nth-child(1)::after {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.lines .line:nth-child(3) {
+  margin-left: -17.5%;
+}
+
+.lines .line:nth-child(3)::after {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+.lines .line:nth-child(4) {
+  margin-left: 17.5%;
+}
+
+.lines .line:nth-child(4)::after {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.lines .line:nth-child(5) {
+  margin-left: 35%;
+}
+
+.lines .line:nth-child(5)::after {
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+
+@-webkit-keyframes run {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
+@keyframes run {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
+/*================================================
+Buy Cryptocurrency Area CSS
+=================================================*/
+.buy-cryptocurrency-area {
+  background: -webkit-gradient(linear, left bottom, left top, from(#0062ff), to(#081587));
+  background: linear-gradient(0deg, #0062ff, #081587);
+  position: relative;
+  z-index: 1;
+}
+
+.buy-cryptocurrency-content {
+  padding-right: 15px;
+}
+
+.buy-cryptocurrency-content h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: var(--whiteColor);
+}
+
+.buy-cryptocurrency-content h1 span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.buy-cryptocurrency-content p {
+  color: var(--whiteColor);
+  font-size: 17px;
+  opacity: .8;
+}
+
+.buy-cryptocurrency-content .link-btn {
+  display: inline-block;
+  color: var(--whiteColor);
+  margin-top: 5px;
+  padding-left: 13px;
+  opacity: .8;
+  font-weight: 600;
+  position: relative;
+}
+
+.buy-cryptocurrency-content .link-btn i {
+  position: absolute;
+  left: 0;
+  font-size: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-top: 1px;
+}
+
+.buy-cryptocurrency-content .link-btn:hover {
+  opacity: 1;
+}
+
+.buy-cryptocurrency-box {
+  padding: 40px;
+  margin-left: 15px;
+  border-radius: 10px;
+  background-color: var(--whiteColor);
+}
+
+.buy-cryptocurrency-box .currency-selection {
+  position: relative;
+}
+
+.buy-cryptocurrency-box .currency-selection label {
+  color: var(--paragraphColor);
+  position: absolute;
+  left: 25px;
+  top: 10px;
+  font-family: var(--fontFamily2);
+  font-size: 14px;
+}
+
+.buy-cryptocurrency-box .currency-selection input {
+  width: 100%;
+  height: 70px;
+  border: none;
+  display: block;
+  border-radius: 5px;
+  padding: 20px 0 0 25px;
+  color: var(--blackColor);
+  border: 1px solid #eeeeee;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: var(--fontFamily2);
+}
+
+.buy-cryptocurrency-box .currency-selection .dropdown {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.buy-cryptocurrency-box .currency-selection .dropdown .dropdown-toggle {
+  border: none;
+  margin-top: 0;
+  height: 70px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  position: relative;
+  color: var(--blackColor);
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  background-color: #eeeeee;
+  padding: 0 65px 0 75px;
+  font-family: var(--fontFamily2);
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.buy-cryptocurrency-box .currency-selection .dropdown .dropdown-toggle img {
+  width: 35px;
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.buy-cryptocurrency-box .currency-selection .dropdown .dropdown-toggle::after {
+  display: none;
+}
+
+.buy-cryptocurrency-box .currency-selection .dropdown .dropdown-toggle::before {
+  content: "\e9ac";
+  color: var(--mainColor);
+  position: absolute;
+  right: 22px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-weight: normal;
+  font-family: 'boxicons';
+  font-size: 30px;
+}
+
+.buy-cryptocurrency-box .currency-selection .dropdown .dropdown-toggle.show {
+  background-color: #f9f9f9;
+}
+
+.buy-cryptocurrency-box .currency-selection .dropdown .dropdown-toggle.show::before {
+  -webkit-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
+}
+
+.buy-cryptocurrency-box .currency-selection .dropdown .dropdown-menu {
+  position: absolute;
+  display: block;
+  width: 100%;
+  -webkit-box-shadow: 5px 5px 70px rgba(0, 0, 0, 0.15);
+          box-shadow: 5px 5px 70px rgba(0, 0, 0, 0.15);
+  border-radius: 0;
+  padding: 0;
+  -webkit-transform: unset !important;
+          transform: unset !important;
+  overflow-x: hidden;
+  border: none;
+  background-color: var(--whiteColor);
+  overflow-y: scroll;
+  min-width: auto;
+  height: 260px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  top: 0;
+  margin-top: 20px !important;
+  left: 0;
+  inset: unset !important;
+  border-radius: 0 5px 0 0;
+}
+
+.buy-cryptocurrency-box .currency-selection .dropdown .dropdown-menu li {
+  border-bottom: 1px solid #eeeeee;
+  padding: 20px 15px;
+}
+
+.buy-cryptocurrency-box .currency-selection .dropdown .dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.buy-cryptocurrency-box .currency-selection .dropdown .dropdown-menu .dropdown-item {
+  cursor: pointer;
+  position: relative;
+  color: var(--blackColor);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  padding: 0 0 0 45px;
+  background-color: transparent;
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--fontFamily2);
+}
+
+.buy-cryptocurrency-box .currency-selection .dropdown .dropdown-menu .dropdown-item:last-child {
+  margin-bottom: 0;
+}
+
+.buy-cryptocurrency-box .currency-selection .dropdown .dropdown-menu .dropdown-item img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.buy-cryptocurrency-box .currency-selection .dropdown .dropdown-menu .dropdown-item:hover {
+  color: var(--mainColor);
+}
+
+.buy-cryptocurrency-box .currency-selection .dropdown .dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  margin-top: 0 !important;
+}
+
+.buy-cryptocurrency-box .features-list {
+  margin-bottom: 0;
+  padding-left: 40px;
+  list-style-type: none;
+}
+
+.buy-cryptocurrency-box .features-list li {
+  color: var(--paragraphColor);
+  position: relative;
+  z-index: 1;
+  font-family: var(--fontFamily2);
+  font-size: var(--fontSize);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.buy-cryptocurrency-box .features-list li i {
+  color: var(--mainColor);
+  width: 24px;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 12px;
+  line-height: 24px;
+  height: 24px;
+  background-color: #eeeeee;
+  font-size: 14px;
+}
+
+.buy-cryptocurrency-box .features-list li::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: #eeeeee;
+  z-index: -1;
+}
+
+.buy-cryptocurrency-box .features-list li:nth-child(1) {
+  padding-bottom: 12px;
+}
+
+.buy-cryptocurrency-box .features-list li:nth-child(2) {
+  padding-top: 0;
+}
+
+.buy-cryptocurrency-box .features-list li .second-span {
+  margin-left: 20px;
+}
+
+.buy-cryptocurrency-box .features-list li .first-span {
+  width: 130px;
+}
+
+.buy-cryptocurrency-box button {
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+  margin-top: 25px;
+  text-align: center;
+  position: relative;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  background-color: var(--optionalColor);
+  color: var(--whiteColor);
+  border: none;
+  padding: 14px 30px;
+  font-family: var(--fontFamily2);
+  font-size: var(--fontSize);
+  font-weight: 600;
+}
+
+.buy-cryptocurrency-box button i {
+  font-size: 20px;
+  margin-left: -30px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  line-height: 1;
+}
+
+.buy-cryptocurrency-box button:hover {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+}
+
+/*================================================
+Sell Cryptocurrency Area CSS
+=================================================*/
+.sell-cryptocurrency-area {
+  background: #f9fafb;
+  position: relative;
+  z-index: 1;
+}
+
+.sell-cryptocurrency-content {
+  padding-right: 15px;
+}
+
+.sell-cryptocurrency-content h1 {
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.sell-cryptocurrency-content h1 span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--mainColor);
+}
+
+.sell-cryptocurrency-content h1 span:nth-child(2) {
+  color: var(--optionalColor);
+  font-family: var(--fontFamily);
+}
+
+.sell-cryptocurrency-content p {
+  font-size: 17px;
+}
+
+.sell-cryptocurrency-content .link-btn {
+  display: inline-block;
+  margin-top: 5px;
+  padding-left: 13px;
+  font-weight: 600;
+  position: relative;
+}
+
+.sell-cryptocurrency-content .link-btn i {
+  position: absolute;
+  left: 0;
+  font-size: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-top: 1px;
+}
+
+.sell-cryptocurrency-box {
+  padding: 40px;
+  margin-left: 15px;
+  border-radius: 10px;
+  background-color: var(--whiteColor);
+  -webkit-box-shadow: 0 6px 12px 0 rgba(36, 58, 120, 0.08);
+          box-shadow: 0 6px 12px 0 rgba(36, 58, 120, 0.08);
+}
+
+.sell-cryptocurrency-box .currency-selection {
+  position: relative;
+}
+
+.sell-cryptocurrency-box .currency-selection label {
+  color: var(--paragraphColor);
+  position: absolute;
+  left: 25px;
+  top: 10px;
+  font-family: var(--fontFamily2);
+  font-size: 14px;
+}
+
+.sell-cryptocurrency-box .currency-selection input {
+  width: 100%;
+  height: 70px;
+  border: none;
+  display: block;
+  border-radius: 5px;
+  padding: 20px 0 0 25px;
+  color: var(--blackColor);
+  border: 1px solid #eeeeee;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: var(--fontFamily2);
+}
+
+.sell-cryptocurrency-box .currency-selection .dropdown {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.sell-cryptocurrency-box .currency-selection .dropdown .dropdown-toggle {
+  border: none;
+  margin-top: 0;
+  height: 70px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  position: relative;
+  color: var(--blackColor);
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  background-color: #eeeeee;
+  padding: 0 65px 0 75px;
+  font-family: var(--fontFamily2);
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.sell-cryptocurrency-box .currency-selection .dropdown .dropdown-toggle img {
+  width: 35px;
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.sell-cryptocurrency-box .currency-selection .dropdown .dropdown-toggle::after {
+  display: none;
+}
+
+.sell-cryptocurrency-box .currency-selection .dropdown .dropdown-toggle.show {
+  background-color: #f9f9f9;
+}
+
+.sell-cryptocurrency-box .currency-selection .dropdown .dropdown-toggle.show::before {
+  -webkit-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
+}
+
+.sell-cryptocurrency-box .currency-selection .dropdown .dropdown-menu {
+  position: absolute;
+  display: block;
+  width: 100%;
+  -webkit-box-shadow: 5px 5px 70px rgba(0, 0, 0, 0.15);
+          box-shadow: 5px 5px 70px rgba(0, 0, 0, 0.15);
+  border-radius: 0;
+  padding: 0;
+  -webkit-transform: unset !important;
+          transform: unset !important;
+  overflow-x: hidden;
+  border: none;
+  background-color: var(--whiteColor);
+  overflow-y: scroll;
+  min-width: auto;
+  height: 260px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  top: 0;
+  margin-top: 20px !important;
+  left: 0;
+  inset: unset !important;
+  border-radius: 0 5px 0 0;
+}
+
+.sell-cryptocurrency-box .currency-selection .dropdown .dropdown-menu li {
+  border-bottom: 1px solid #eeeeee;
+  padding: 20px 15px;
+}
+
+.sell-cryptocurrency-box .currency-selection .dropdown .dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.sell-cryptocurrency-box .currency-selection .dropdown .dropdown-menu .dropdown-item {
+  cursor: pointer;
+  position: relative;
+  color: var(--blackColor);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  padding: 0 0 0 45px;
+  background-color: transparent;
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--fontFamily2);
+}
+
+.sell-cryptocurrency-box .currency-selection .dropdown .dropdown-menu .dropdown-item:last-child {
+  margin-bottom: 0;
+}
+
+.sell-cryptocurrency-box .currency-selection .dropdown .dropdown-menu .dropdown-item img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.sell-cryptocurrency-box .currency-selection .dropdown .dropdown-menu .dropdown-item:hover {
+  color: var(--mainColor);
+}
+
+.sell-cryptocurrency-box .currency-selection .dropdown .dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  margin-top: 0 !important;
+}
+
+.sell-cryptocurrency-box .features-list {
+  margin-bottom: 0;
+  padding-left: 40px;
+  list-style-type: none;
+}
+
+.sell-cryptocurrency-box .features-list li {
+  color: var(--paragraphColor);
+  position: relative;
+  z-index: 1;
+  font-family: var(--fontFamily2);
+  font-size: var(--fontSize);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.sell-cryptocurrency-box .features-list li i {
+  color: var(--mainColor);
+  width: 24px;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 12px;
+  line-height: 24px;
+  height: 24px;
+  background-color: #eeeeee;
+  font-size: 14px;
+}
+
+.sell-cryptocurrency-box .features-list li::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: #eeeeee;
+  z-index: -1;
+}
+
+.sell-cryptocurrency-box .features-list li:nth-child(1) {
+  padding-bottom: 12px;
+}
+
+.sell-cryptocurrency-box .features-list li:nth-child(2) {
+  padding-top: 0;
+}
+
+.sell-cryptocurrency-box .features-list li .second-span {
+  margin-left: 20px;
+}
+
+.sell-cryptocurrency-box .features-list li .first-span {
+  width: 130px;
+}
+
+.sell-cryptocurrency-box button {
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+  margin-top: 25px;
+  text-align: center;
+  position: relative;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  background-color: var(--optionalColor);
+  color: var(--whiteColor);
+  border: none;
+  padding: 14px 30px;
+  font-family: var(--fontFamily2);
+  font-size: var(--fontSize);
+  font-weight: 600;
+}
+
+.sell-cryptocurrency-box button i {
+  font-size: 20px;
+  margin-left: -30px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  line-height: 1;
+}
+
+.sell-cryptocurrency-box button:hover {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+}
+
+/*================================================
+Trade Cryptocurrency Area CSS
+=================================================*/
+.trade-cryptocurrency-area {
+  background: -webkit-gradient(linear, left bottom, left top, from(#0062ff), to(#081587));
+  background: linear-gradient(0deg, #0062ff, #081587);
+  position: relative;
+  z-index: 1;
+}
+
+.trade-cryptocurrency-content {
+  padding-right: 15px;
+}
+
+.trade-cryptocurrency-content h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: var(--whiteColor);
+}
+
+.trade-cryptocurrency-content h1 span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.trade-cryptocurrency-content p {
+  color: var(--whiteColor);
+  font-size: 17px;
+  opacity: .8;
+}
+
+.trade-cryptocurrency-content .link-btn {
+  display: inline-block;
+  color: var(--whiteColor);
+  margin-top: 5px;
+  padding-left: 13px;
+  opacity: .8;
+  font-weight: 600;
+  position: relative;
+}
+
+.trade-cryptocurrency-content .link-btn i {
+  position: absolute;
+  left: 0;
+  font-size: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-top: 1px;
+}
+
+.trade-cryptocurrency-content .link-btn:hover {
+  opacity: 1;
+}
+
+.trade-cryptocurrency-box {
+  padding: 40px;
+  /* margin-left: 15px; */
+  border-radius: 10px;
+  background-color: var(--whiteColor);
+}
+
+.trade-cryptocurrency-box .currency-selection {
+  position: relative;
+}
+
+.trade-cryptocurrency-box .currency-selection label {
+  color: var(--paragraphColor);
+  position: absolute;
+  left: 25px;
+  top: 10px;
+  font-family: var(--fontFamily2);
+  font-size: 14px;
+}
+
+.trade-cryptocurrency-box .currency-selection input {
+  width: 100%;
+  height: 70px;
+  border: none;
+  display: block;
+  border-radius: 5px;
+  padding: 20px 0 0 25px;
+  color: var(--blackColor);
+  border: 1px solid #eeeeee;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: var(--fontFamily2);
+}
+
+.trade-cryptocurrency-box .currency-selection .dropdown {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.trade-cryptocurrency-box .currency-selection .dropdown .dropdown-toggle {
+  border: none;
+  margin-top: 0;
+  height: 70px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  position: relative;
+  color: var(--blackColor);
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  background-color: #eeeeee;
+  padding: 0 65px 0 75px;
+  font-family: var(--fontFamily2);
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.trade-cryptocurrency-box .currency-selection .dropdown .dropdown-toggle img {
+  width: 35px;
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.trade-cryptocurrency-box .currency-selection .dropdown .dropdown-toggle::after {
+  display: none;
+}
+
+.trade-cryptocurrency-box .currency-selection .dropdown .dropdown-toggle.show {
+  background-color: #f9f9f9;
+}
+
+.trade-cryptocurrency-box .currency-selection .dropdown .dropdown-toggle.show::before {
+  -webkit-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
+}
+
+.trade-cryptocurrency-box .currency-selection .dropdown .dropdown-menu {
+  position: absolute;
+  display: block;
+  width: 100%;
+  -webkit-box-shadow: 5px 5px 70px rgba(0, 0, 0, 0.15);
+          box-shadow: 5px 5px 70px rgba(0, 0, 0, 0.15);
+  border-radius: 0;
+  padding: 0;
+  -webkit-transform: unset !important;
+          transform: unset !important;
+  overflow-x: hidden;
+  border: none;
+  background-color: var(--whiteColor);
+  overflow-y: scroll;
+  min-width: auto;
+  height: 260px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  top: 0;
+  margin-top: 20px !important;
+  left: 0;
+  inset: unset !important;
+  border-radius: 0 5px 0 0;
+}
+
+.trade-cryptocurrency-box .currency-selection .dropdown .dropdown-menu li {
+  border-bottom: 1px solid #eeeeee;
+  padding: 20px 15px;
+}
+
+.trade-cryptocurrency-box .currency-selection .dropdown .dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.trade-cryptocurrency-box .currency-selection .dropdown .dropdown-menu .dropdown-item {
+  cursor: pointer;
+  position: relative;
+  color: var(--blackColor);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  padding: 0 0 0 45px;
+  background-color: transparent;
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--fontFamily2);
+}
+
+.trade-cryptocurrency-box .currency-selection .dropdown .dropdown-menu .dropdown-item:last-child {
+  margin-bottom: 0;
+}
+
+.trade-cryptocurrency-box .currency-selection .dropdown .dropdown-menu .dropdown-item img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.trade-cryptocurrency-box .currency-selection .dropdown .dropdown-menu .dropdown-item:hover {
+  color: var(--mainColor);
+}
+
+.trade-cryptocurrency-box .currency-selection .dropdown .dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  margin-top: 0 !important;
+}
+
+.trade-cryptocurrency-box .features-list {
+  margin-bottom: 0;
+  padding-left: 40px;
+  list-style-type: none;
+}
+
+.trade-cryptocurrency-box .features-list li {
+  color: var(--paragraphColor);
+  position: relative;
+  z-index: 1;
+  font-family: var(--fontFamily2);
+  font-size: var(--fontSize);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.trade-cryptocurrency-box .features-list li i {
+  color: var(--mainColor);
+  width: 24px;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 12px;
+  line-height: 24px;
+  height: 24px;
+  background-color: #eeeeee;
+  font-size: 14px;
+}
+
+.trade-cryptocurrency-box .features-list li::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: #eeeeee;
+  z-index: -1;
+}
+
+.trade-cryptocurrency-box .features-list li:nth-child(1) {
+  padding-bottom: 12px;
+}
+
+.trade-cryptocurrency-box .features-list li:nth-child(2) {
+  padding-top: 0;
+}
+
+.trade-cryptocurrency-box .features-list li .second-span {
+  margin-left: 20px;
+}
+
+.trade-cryptocurrency-box .features-list li .first-span {
+  width: 130px;
+}
+
+.trade-cryptocurrency-box button {
+  /* display: block;
+  width: 100%;
+  border-radius: 3px;
+  margin-top: 25px;
+  text-align: center;
+  position: relative;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  background-color: var(--optionalColor);
+  color: var(--whiteColor);
+  border: none;
+  padding: 14px 30px;
+  font-family: var(--fontFamily2);
+  font-size: var(--fontSize);
+  font-weight: 600; */
+}
+
+.trade-cryptocurrency-box button i {
+  font-size: 20px;
+  margin-left: -30px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  line-height: 1;
+}
+
+.trade-cryptocurrency-box button:hover {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+}
+
+/*================================================
+Profile Authentication Area CSS
+=================================================*/
+.profile-authentication-area {
+  height: 100vh;
+  position: relative;
+  background-color: #f9f9f9;
+}
+
+.profile-authentication-area .back-icon {
+  position: absolute;
+  right: 20px;
+  font-size: 50px;
+  top: 20px;
+  line-height: 1;
+  color: var(--blackColor);
+  display: inline-block;
+}
+
+.profile-authentication-area .back-icon:hover {
+  color: red;
+}
+
+.login-form {
+  padding: 40px;
+  margin-right: 15px;
+  border-radius: 5px;
+  background-color: var(--whiteColor);
+}
+
+.login-form h2 {
+  font-size: 34px;
+  margin-bottom: 35px;
+}
+
+.login-form form .form-group {
+  margin-bottom: 20px;
+}
+
+.login-form form .remember-me-wrap {
+  margin-top: 5px;
+}
+
+.login-form form .remember-me-wrap .form-check .form-check-input[type=checkbox] {
+  border-radius: 0;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+}
+
+.login-form form .remember-me-wrap .form-check .form-check-input:checked {
+  background-color: var(--optionalColor);
+  border-color: var(--optionalColor);
+}
+
+.login-form form .remember-me-wrap .form-check .form-check-input:focus {
+  border-color: var(--optionalColor);
+}
+
+.login-form form .remember-me-wrap .form-check .form-check-label {
+  cursor: pointer;
+  color: var(--paragraphColor);
+}
+
+.login-form form .lost-your-password-wrap {
+  text-align: end;
+}
+
+.login-form form .lost-your-password-wrap a {
+  display: inline-block;
+  position: relative;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.login-form form .lost-your-password-wrap a::before {
+  left: 0;
+  bottom: 0;
+  content: '';
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  background-color: #eeeeee;
+}
+
+.login-form form .lost-your-password-wrap a::after {
+  left: 0;
+  width: 0;
+  bottom: 0;
+  content: '';
+  height: 1px;
+  position: absolute;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  background-color: var(--mainColor);
+}
+
+.login-form form .lost-your-password-wrap a:hover::before {
+  width: 0;
+}
+
+.login-form form .lost-your-password-wrap a:hover::after {
+  width: 100%;
+}
+
+.login-form form button {
+  width: 100%;
+  border: none;
+  display: block;
+  overflow: hidden;
+  margin-top: 20px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 14px 30px;
+  color: var(--whiteColor);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  background-color: var(--mainColor);
+  font-family: var(--fontFamily2);
+  font-size: var(--fontSize);
+  font-weight: 700;
+}
+
+.login-form form button:hover {
+  background-color: var(--optionalColor);
+  color: var(--whiteColor);
+}
+
+.login-form .login-with-button {
+  margin-top: 25px;
+}
+
+.login-form .login-with-button button {
+  width: 100%;
+  display: block;
+  color: #248BD2;
+  border-radius: 5px;
+  border: 1px solid #D2D2D2;
+  background-color: transparent;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  padding-top: 13px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 13px;
+}
+
+.login-form .login-with-button button svg {
+  position: absolute;
+  margin-left: -25px;
+  margin-left: -25px;
+  margin-top: 2px;
+}
+
+.login-form .login-with-button button:hover {
+  color: var(--blackColor);
+  background-color: #E9E9E9;
+}
+
+.register-form {
+  padding: 40px;
+  margin-left: 15px;
+  border-radius: 5px;
+  background-color: var(--whiteColor);
+}
+
+.register-form h2 {
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+.register-form form .form-group {
+  margin-bottom: 20px;
+}
+
+.register-form form button {
+  width: 100%;
+  border: none;
+  display: block;
+  overflow: hidden;
+  margin-top: 20px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 14px 30px;
+  color: var(--whiteColor);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  background-color: var(--mainColor);
+  font-size: var(--fontSize);
+  font-weight: 700;
+}
+
+.register-form form button:hover {
+  background-color: var(--blackColor);
+  color: var(--whiteColor);
+}
+
+.register-form .register-with-button {
+  margin-top: 25px;
+}
+
+.register-form .register-with-button button {
+  width: 100%;
+  display: block;
+  color: #248BD2;
+  border-radius: 5px;
+  border: 1px solid #D2D2D2;
+  background-color: transparent;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  padding-top: 13px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 13px;
+}
+
+.register-form .register-with-button button svg {
+  position: absolute;
+  margin-left: -25px;
+  margin-left: -25px;
+  margin-top: 2px;
+}
+
+.register-form .register-with-button button:hover {
+  color: var(--blackColor);
+  background-color: #E9E9E9;
+}
+
+/*================================================
+Payment Method Area CSS
+=================================================*/
+.payment-method-list {
+  padding-left: 0;
+  margin-bottom: 0;
+  text-align: center;
+  list-style-type: none;
+}
+
+.payment-method-list li {
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: var(--whiteColor);
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/*================================================
+Blog Area CSS
+=================================================*/
+.single-blog-post {
+  margin-bottom: 30px;
+}
+
+.single-blog-post .post-image {
+  margin-bottom: 25px;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.single-blog-post .post-image img {
+  border-radius: 5px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.single-blog-post .post-image .tag-list {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+
+.single-blog-post .post-image .tag-list a {
+  padding: 3px 12px;
+  margin-right: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  color: var(--mainColor);
+  background-color: var(--whiteColor);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.single-blog-post .post-content {
+  position: relative;
+}
+
+.single-blog-post .post-content .author {
+  margin-top: 5px;
+}
+
+.single-blog-post .post-content .author img {
+  width: 45px;
+  border-radius: 50%;
+}
+
+.single-blog-post .post-content .author a {
+  display: inline-block;
+  margin-left: 12px;
+  font-weight: 600;
+}
+
+.single-blog-post .post-content h3 {
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.single-blog-post .post-content h3 a {
+  -webkit-transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+  transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+  position: relative;
+  padding: 0.1% 0px;
+  display: inline;
+  color: inherit;
+  background-image: -webkit-gradient(linear, left top, right top, from(currentColor), to(currentColor));
+  background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
+  background-size: 0px 2px;
+  background-position: 0px 95%;
+  background-repeat: no-repeat;
+}
+
+.single-blog-post .post-content h3 a:hover {
+  background-size: 100% 2px;
+}
+
+.single-blog-post .post-content p {
+  font-size: 16px;
+  padding-right: 30px;
+}
+
+.single-blog-post .post-content .link-btn {
+  bottom: 0;
+  right: 15px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #f9f9f9;
+  text-align: center;
+  line-height: 47px;
+  font-size: 25px;
+}
+
+.single-blog-post .post-content .link-btn:hover {
+  color: var(--whiteColor);
+  background-color: var(--mainColor);
+}
+
+.single-blog-post:hover .post-image img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.single-blog-post:hover .post-content h3 a {
+  background-size: 100% 2px;
+}
+
+/*================================================
+Blog Details Area CSS
+=================================================*/
+.blog-details-area {
+  background-image: url(../images/bg5.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blog-details-header .content .category {
+  color: var(--mainColor);
+  display: inline-block;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.blog-details-header .content h1 {
+  margin-bottom: 15px;
+  line-height: 1.4;
+  font-size: 34px;
+}
+
+.blog-details-header .content p {
+  font-size: 16px;
+  padding-right: 15px;
+}
+
+.blog-details-header .content .post-author-meta {
+  margin-top: 25px;
+}
+
+.blog-details-header .content .post-author-meta img {
+  border-radius: 50%;
+  height: 65px;
+  width: 65px;
+}
+
+.blog-details-header .content .post-author-meta .title {
+  margin-left: 15px;
+}
+
+.blog-details-header .content .post-author-meta .title .name {
+  display: block;
+  font-size: 17px;
+  margin-bottom: 3px;
+  color: var(--paragraphColor);
+}
+
+.blog-details-header .content .post-author-meta .title .name a {
+  font-weight: 600;
+}
+
+.blog-details-header .content .post-author-meta .title .date {
+  display: block;
+  color: var(--paragraphColor);
+}
+
+.blog-details-header .image {
+  border-radius: 5px;
+}
+
+.blog-details-header .image img {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+}
+
+.blog-details-desc {
+  border-top: 1px solid #eeeeee;
+  padding-top: 50px;
+  margin-top: 50px;
+}
+
+.blog-details-desc .article-content {
+  background-color: var(--whiteColor);
+  border-radius: 10px;
+  position: relative;
+  max-width: 850px;
+  padding: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog-details-desc .article-content p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.blog-details-desc .article-content p a {
+  text-decoration: underline;
+}
+
+.blog-details-desc .article-content p strong {
+  font-weight: 600;
+  color: var(--blackColor);
+}
+
+.blog-details-desc .article-content p:last-child {
+  margin-bottom: 0;
+}
+
+.blog-details-desc .article-content h3 {
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.blog-details-desc .article-content ul {
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.blog-details-desc .article-content ul li {
+  margin-bottom: 12px;
+  color: var(--paragraphColor);
+}
+
+.blog-details-desc .article-content ul li a {
+  text-decoration: underline;
+}
+
+.blog-details-desc .article-content ul li strong {
+  font-weight: 600;
+  color: var(--blackColor);
+}
+
+.blog-details-desc .article-content ul li:last-child {
+  margin-bottom: 0;
+}
+
+.blog-details-desc .article-content ul:last-child {
+  margin-bottom: 0;
+}
+
+.blog-details-desc .article-content .social-links {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+  position: absolute;
+  right: -100px;
+  top: 0;
+}
+
+.blog-details-desc .article-content .social-links li {
+  margin-bottom: 12px;
+}
+
+.blog-details-desc .article-content .social-links li a {
+  font-size: 20px;
+  display: block;
+  line-height: 42px;
+  text-decoration: none;
+  width: 40px;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+  height: 40px;
+  text-align: center;
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+}
+
+.blog-details-desc .article-content .social-links li a.facebook {
+  background-color: #3b5998;
+}
+
+.blog-details-desc .article-content .social-links li a.twitter {
+  background-color: #1da1f2;
+}
+
+.blog-details-desc .article-content .social-links li a.linkedin {
+  background-color: #0077b5;
+}
+
+.blog-details-desc .article-content .social-links li a.instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.blog-details-desc .article-content .social-links li a:hover {
+  opacity: .8;
+}
+
+.blog-details-desc .article-content .social-links li:last-child {
+  margin-bottom: 0;
+}
+
+.blog-details-desc .article-content .article-tags {
+  margin-top: 30px;
+}
+
+.blog-details-desc .article-content .article-tags a {
+  padding: 5px 20px;
+  margin-right: 8px;
+  border-radius: 30px;
+  display: inline-block;
+  color: var(--blackColor);
+  background-color: #f9f9f9;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.blog-details-desc .article-content .article-tags a:hover {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+  border-radius: 5px;
+}
+
+.blog-details-desc .article-content .article-tags a:last-child {
+  margin-right: 0;
+}
+
+.blog-details-desc .article-content .wp-block-gallery.columns-3 {
+  list-style-type: none;
+  padding-left: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.blog-details-desc .article-content .wp-block-gallery.columns-3 li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.3333%;
+          flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+  margin-bottom: 0;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.blog-details-desc .article-content .wp-block-gallery.columns-3 li figure {
+  margin-bottom: 0;
+}
+
+.blog-details-desc .comment-respond {
+  border-top: 1px solid #eeeeee;
+  margin-top: 40px;
+  padding-top: 30px;
+}
+
+.blog-details-desc .comment-respond .comment-reply-title {
+  margin-top: 0;
+  margin-bottom: 9px;
+}
+
+.blog-details-desc .comment-respond .comment-notes {
+  font-style: italic;
+  margin-bottom: 25px;
+}
+
+.blog-details-desc .comment-respond .comment-notes .required {
+  color: red;
+}
+
+.blog-details-desc .comment-respond .comment-form .form-group {
+  margin-bottom: 20px;
+}
+
+.blog-details-desc .comment-respond .comment-form .form-check {
+  margin-top: 10px;
+}
+
+.blog-details-desc .comment-respond .comment-form .form-check .form-check-label {
+  color: var(--paragraphColor);
+}
+
+.blog-details-desc .comment-respond .comment-form .form-check .form-check-label a {
+  color: var(--mainColor);
+  font-weight: 500;
+}
+
+.blog-details-desc .comment-respond .comment-form .form-check .form-check-label a:hover {
+  text-decoration: underline;
+}
+
+.blog-details-desc .comment-respond .comment-form .form-check .form-check-label strong {
+  font-weight: 600;
+  color: var(--blackColor);
+}
+
+.blog-details-desc .comment-respond .comment-form .form-check .form-check-input[type=checkbox] {
+  border-radius: 0;
+  -webkit-box-shadow: unset !important;
+          box-shadow: unset !important;
+}
+
+.blog-details-desc .comment-respond .comment-form .form-check .form-check-input[type=checkbox]:checked {
+  background-color: var(--mainColor);
+  border-color: var(--mainColor);
+}
+
+.blog-details-desc .comment-respond .comment-form .default-btn {
+  margin-top: 10px;
+}
+
+blockquote, .blockquote {
+  overflow: hidden;
+  background-color: #fafafa;
+  padding: 40px 50px !important;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+blockquote p, .blockquote p {
+  line-height: 1.7;
+  margin-bottom: 0;
+  color: var(--blackColor);
+  font-weight: 600;
+  font-style: italic;
+  font-size: 20px !important;
+}
+
+blockquote cite, .blockquote cite {
+  padding-left: 30px;
+  position: relative;
+  font-weight: 600;
+  font-family: var(--fontFamily2);
+}
+
+blockquote cite::before, .blockquote cite::before {
+  left: 0;
+  top: 50%;
+  width: 20px;
+  height: 2px;
+  content: '';
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: var(--mainColor);
+}
+
+/*================================================
+Terms & Conditions Area CSS
+=================================================*/
+.terms-conditions-content h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.terms-conditions-content h3:not(:first-child) {
+  margin-top: 25px;
+}
+
+.terms-conditions-content strong {
+  color: var(--blackColor) !important;
+}
+
+.terms-conditions-content p a {
+  color: var(--mainColor);
+}
+
+.terms-conditions-content p a:hover {
+  text-decoration: underline;
+}
+
+.terms-conditions-content ul li {
+  color: var(--paragraphColor);
+  margin-bottom: 12px;
+}
+
+.terms-conditions-content ul li a {
+  color: var(--mainColor);
+}
+
+.terms-conditions-content ul li a:hover {
+  text-decoration: underline;
+}
+
+.terms-conditions-content ul li:last-child {
+  margin-bottom: 0;
+}
+
+/*================================================
+Privacy Policy Area CSS
+=================================================*/
+.privacy-policy-content h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.privacy-policy-content h3:not(:first-child) {
+  margin-top: 25px;
+}
+
+.privacy-policy-content strong {
+  color: var(--blackColor) !important;
+}
+
+.privacy-policy-content p a {
+  color: var(--mainColor);
+}
+
+.privacy-policy-content p a:hover {
+  text-decoration: underline;
+}
+
+.privacy-policy-content ul li {
+  color: var(--paragraphColor);
+  margin-bottom: 12px;
+}
+
+.privacy-policy-content ul li a {
+  color: var(--mainColor);
+}
+
+.privacy-policy-content ul li a:hover {
+  text-decoration: underline;
+}
+
+.privacy-policy-content ul li:last-child {
+  margin-bottom: 0;
+}
+
+/*================================================
+Guides Area CSS
+=================================================*/
+.guides-content {
+  border-left: 1px dashed var(--optionalColor);
+  padding-bottom: 40px;
+  padding-left: 55px;
+  position: relative;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.guides-content .number {
+  top: 0;
+  left: -30px;
+  width: 60px;
+  height: 60px;
+  line-height: 58px;
+  border-radius: 50%;
+  text-align: center;
+  position: absolute;
+  color: var(--whiteColor);
+  background-color: var(--mainColor);
+  border: 1px dashed var(--whiteColor);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.guides-content .box h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.guides-content .box span {
+  font-size: 18px;
+  color: var(--mainColor);
+  display: block;
+}
+
+.guides-content .content {
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 50px;
+  margin-left: 15px;
+}
+
+.guides-content .content p {
+  font-size: 17px;
+}
+
+.guides-content .content img {
+  margin-top: 15px;
+}
+
+.guides-content .content ul li {
+  color: var(--paragraphColor);
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.guides-content .content ul li a {
+  color: var(--mainColor);
+}
+
+.guides-content .content ul li a:hover {
+  text-decoration: underline;
+}
+
+.guides-content .content ul li:last-child {
+  margin-bottom: 0;
+}
+
+.guides-content:last-child {
+  padding-bottom: 0;
+}
+
+.guides-content:last-child .content {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/*================================================
+FAQ Area CSS
+=================================================*/
+.faq-accordion .nav-tabs {
+  padding-left: 0;
+  margin-bottom: 50px;
+  list-style-type: none;
+  text-align: center;
+  display: block;
+  border: none;
+}
+
+.faq-accordion .nav-tabs .nav-item {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.faq-accordion .nav-tabs .nav-item:last-child {
+  margin-right: 0;
+}
+
+.faq-accordion .nav-tabs .nav-item:first-child {
+  margin-left: 0;
+}
+
+.faq-accordion .nav-tabs .nav-item .nav-link {
+  -webkit-box-shadow: 2px 8px 20px 0 rgba(25, 42, 70, 0.13);
+          box-shadow: 2px 8px 20px 0 rgba(25, 42, 70, 0.13);
+  background-color: var(--whiteColor);
+  padding: 20px 25px;
+  margin-bottom: 0;
+  border: none;
+  border-radius: 5px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.faq-accordion .nav-tabs .nav-item .nav-link i {
+  display: block;
+  line-height: 1;
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.faq-accordion .nav-tabs .nav-item .nav-link.active, .faq-accordion .nav-tabs .nav-item .nav-link:hover {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+}
+
+.faq-accordion .tab-pane .accordion-item .accordion-button {
+  width: 100%;
+  border: none;
+  display: block;
+  border-radius: 0;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  text-align: start;
+  position: relative;
+  color: var(--blackColor);
+  background-color: transparent;
+  border-color: transparent;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 20px;
+  padding-bottom: 18px;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: var(--fontFamily2);
+}
+
+.faq-accordion .tab-pane .accordion-item .accordion-button.collapsed {
+  border-bottom: 1px solid #eeeeee;
+}
+
+.faq-accordion .tab-pane .accordion-item .accordion-button.collapsed::before {
+  content: "\e9ac";
+}
+
+.faq-accordion .tab-pane .accordion-item .accordion-collapse {
+  border: none;
+}
+
+.faq-accordion .tab-pane .accordion-item .accordion-body {
+  padding: 0 0 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.faq-accordion .tab-pane .accordion-item .accordion-body p {
+  font-size: 16px;
+}
+
+.faq-accordion .tab-pane .accordion-item .accordion-body p strong {
+  color: var(--blackColor);
+}
+
+.faq-accordion .tab-pane .accordion-item .accordion-body p a {
+  color: var(--mainColor);
+}
+
+.faq-accordion .tab-pane .accordion-item .accordion-body p a:hover {
+  text-decoration: underline;
+}
+
+.faq-accordion .tab-pane .accordion-item .accordion-body ul {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.faq-accordion .tab-pane .accordion-item .accordion-body ul li {
+  margin-bottom: 12px;
+  color: var(--paragraphColor);
+}
+
+.faq-accordion .tab-pane .accordion-item .accordion-body ul li strong {
+  color: var(--blackColor);
+}
+
+.faq-accordion .tab-pane .accordion-item .accordion-body ul li a {
+  color: var(--mainColor);
+}
+
+.faq-accordion .tab-pane .accordion-item .accordion-body ul li a:hover {
+  text-decoration: underline;
+}
+
+.faq-accordion .tab-pane .accordion-item .accordion-body ul li:last-child {
+  margin-bottom: 0;
+}
+
+.faq-accordion .tab-pane .accordion-item .accordion-body ul:last-child {
+  margin-bottom: 0;
+}
+
+.faq-accordion .tab-pane .accordion-item:first-child .accordion-button {
+  border-top: 1px solid #e9e9e9;
+}
+
+/*================================================
+Pagination CSS
+=================================================*/
+.pagination-area {
+  margin-top: 20px;
+  padding-top: 30px;
+  border-top: 1px solid #eeeeee;
+}
+
+.pagination-area .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pagination-area .page-numbers {
+  width: 45px;
+  height: 45px;
+  border: none;
+  display: block;
+  line-height: 43px;
+  position: relative;
+  text-align: center;
+  border-radius: 50%;
+  color: var(--paragraphColor);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eaeef3));
+  background: linear-gradient(180deg, #ffffff 0%, #eaeef3 100%);
+  -webkit-box-shadow: 0 5px 15px 0 rgba(107, 124, 147, 0.15), 0 2px 4px 0 rgba(107, 124, 147, 0.2), inset 0 -2px 0 0 #c2cfde;
+          box-shadow: 0 5px 15px 0 rgba(107, 124, 147, 0.15), 0 2px 4px 0 rgba(107, 124, 147, 0.2), inset 0 -2px 0 0 #c2cfde;
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.pagination-area .page-numbers.next {
+  top: 2px;
+  margin-left: auto;
+}
+
+.pagination-area .page-numbers:hover {
+  color: var(--mainColor);
+}
+
+.pagination-area .page-numbers.current {
+  background: var(--whiteColor);
+  color: var(--mainColor);
+}
+
+.pagination-area .page-numbers:first-child {
+  margin-left: 0;
+}
+
+.pagination-area .page-numbers:last-child {
+  margin-right: 0;
+}
+
+/*================================================
+Contact Area CSS
+=================================================*/
+.contact-info {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 40px 30px;
+}
+
+.contact-info h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.contact-info .contact-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style-type: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 0;
+  margin-top: 25px;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.contact-info .contact-list li {
+  margin-bottom: 30px;
+  width: 50%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.contact-info .contact-list li .icon {
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  line-height: 60px;
+  border-radius: 50%;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  background-color: var(--whiteColor);
+  -webkit-box-shadow: 0 7px 18px 0 rgba(107, 124, 147, 0.1);
+          box-shadow: 0 7px 18px 0 rgba(107, 124, 147, 0.1);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.contact-info .contact-list li p {
+  font-size: 17px;
+}
+
+.contact-info .contact-list li p a {
+  color: var(--paragraphColor);
+}
+
+.contact-info .contact-list li p a:hover {
+  color: var(--mainColor);
+}
+
+.contact-info .contact-list li:last-child {
+  margin-bottom: 0;
+}
+
+.contact-info .contact-list li:hover .icon {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+}
+
+.contact-info .social-links {
+  padding-left: 0;
+  list-style-type: none;
+  margin-bottom: 0;
+  margin-top: 25px;
+}
+
+.contact-info .social-links li {
+  display: inline-block;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.contact-info .social-links li a {
+  display: block;
+  width: 35px;
+  border-radius: 5px;
+  position: relative;
+  height: 35px;
+  text-align: center;
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+  font-size: 18px;
+}
+
+.contact-info .social-links li a i {
+  left: 0;
+  right: 0;
+  top: 50%;
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.contact-info .social-links li a:hover {
+  background-color: var(--mainColor);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  color: var(--whiteColor);
+}
+
+.contact-info .social-links li a.facebook {
+  background-color: #3b5998;
+}
+
+.contact-info .social-links li a.twitter {
+  background-color: #1da1f2;
+}
+
+.contact-info .social-links li a.linkedin {
+  background-color: #0077b5;
+}
+
+.contact-info .social-links li a.instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.contact-info .social-links li:last-child {
+  margin-right: 0;
+}
+
+.contact-info .social-links li:first-child {
+  margin-left: 0;
+}
+
+.maps {
+  height: 100%;
+}
+
+.maps iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.contact-form {
+  max-width: 900px;
+  text-align: center;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-form .form-group {
+  margin-bottom: 25px;
+}
+
+.contact-form .form-group .form-control {
+  padding-left: 20px;
+  font-size: 14.5px;
+  height: 55px;
+}
+
+.contact-form .form-group textarea.form-control {
+  height: auto;
+}
+
+.contact-form .form-check {
+  margin-top: 5px;
+  padding-left: 0;
+}
+
+.contact-form .form-check .form-check-label {
+  color: var(--paragraphColor);
+}
+
+.contact-form .form-check .form-check-label strong {
+  font-weight: 600;
+  color: var(--blackColor);
+}
+
+.contact-form .form-check .form-check-input {
+  float: unset;
+  margin-left: 0;
+  margin-right: 5px;
+}
+
+.contact-form .form-check .form-check-input[type=checkbox] {
+  border-radius: 0;
+  -webkit-box-shadow: unset !important;
+          box-shadow: unset !important;
+}
+
+.contact-form .form-check .form-check-input[type=checkbox]:checked {
+  background-color: var(--mainColor);
+  border-color: var(--mainColor);
+}
+
+.contact-form .default-btn {
+  margin-top: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.contact-form .help-block.with-errors {
+  color: red;
+  margin-bottom: 0;
+  margin-top: 12px;
+}
+
+.contact-form #msgSubmit {
+  margin: 0;
+}
+
+.contact-form #msgSubmit.text-danger {
+  margin-top: 12px;
+}
+
+.contact-form #msgSubmit.text-success {
+  margin-top: 12px;
+}
+
+/*================================================
+Footer Area CSS
+=================================================*/
+.footer-area {
+  background-color: #f9faff;
+  padding-top: 0px;
+}
+
+.single-footer-widget {
+  margin-bottom: 30px;
+}
+
+.single-footer-widget h3 {
+  position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  font-size: 20px;
+}
+
+.single-footer-widget h3::before {
+  left: 0;
+  bottom: 0;
+  content: '';
+  width: 44px;
+  height: 2px;
+  position: absolute;
+  background-color: var(--optionalColor);
+}
+
+.single-footer-widget .newsletter-form {
+  margin-top: 25px;
+  padding-right: 25px;
+}
+
+.single-footer-widget .newsletter-form p {
+  margin-bottom: 10px;
+}
+
+.single-footer-widget .newsletter-form form {
+  position: relative;
+}
+
+.single-footer-widget .newsletter-form form .input-newsletter {
+  display: block;
+  color: var(--blackColor);
+  width: 100%;
+  background-color: var(--whiteColor);
+  height: 45px;
+  font-size: var(--fontSize);
+  border-radius: 5px;
+  border: 1px solid #eee;
+  padding-left: 15px;
+}
+
+.single-footer-widget .newsletter-form form .input-newsletter::-webkit-input-placeholder {
+  color: #a7a7a7;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.single-footer-widget .newsletter-form form .input-newsletter:-ms-input-placeholder {
+  color: #a7a7a7;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.single-footer-widget .newsletter-form form .input-newsletter::-ms-input-placeholder {
+  color: #a7a7a7;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.single-footer-widget .newsletter-form form .input-newsletter::placeholder {
+  color: #a7a7a7;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.single-footer-widget .newsletter-form form .input-newsletter:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.single-footer-widget .newsletter-form form .input-newsletter:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.single-footer-widget .newsletter-form form .input-newsletter:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.single-footer-widget .newsletter-form form .input-newsletter:focus::placeholder {
+  color: transparent;
+}
+
+.single-footer-widget .newsletter-form form button {
+  top: 0;
+  right: 0;
+  height: 45px;
+  border: none;
+  border-radius: 5px;
+  position: absolute;
+  display: inline-block;
+  padding: 0 42px 0 20px;
+  color: var(--whiteColor);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  background-color: var(--optionalColor);
+  font-family: var(--fontFamily2);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.single-footer-widget .newsletter-form form button i {
+  top: 50%;
+  right: 18px;
+  font-size: 18px;
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.single-footer-widget .newsletter-form form button:hover {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+}
+
+.single-footer-widget .newsletter-form form .validation-danger {
+  margin-top: 15px;
+  color: red;
+}
+
+.single-footer-widget .newsletter-form form .validation-success {
+  margin-top: 15px;
+  color: green;
+}
+
+.single-footer-widget .social-links {
+  padding-left: 0;
+  list-style-type: none;
+  margin-bottom: 0;
+  margin-top: 25px;
+}
+
+.single-footer-widget .social-links li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.single-footer-widget .social-links li a {
+  display: block;
+  width: 35px;
+  border-radius: 5px;
+  position: relative;
+  height: 35px;
+  text-align: center;
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+  font-size: 18px;
+}
+
+.single-footer-widget .social-links li a i {
+  left: 0;
+  right: 0;
+  top: 50%;
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.single-footer-widget .social-links li a:hover {
+  background-color: var(--mainColor);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  color: var(--whiteColor);
+}
+
+.single-footer-widget .social-links li a.facebook {
+  background-color: #3b5998;
+}
+
+.single-footer-widget .social-links li a.twitter {
+  background-color: #1da1f2;
+}
+
+.single-footer-widget .social-links li a.linkedin {
+  background-color: #0077b5;
+}
+
+.single-footer-widget .social-links li a.instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.single-footer-widget .social-links li:last-child {
+  margin-right: 0;
+}
+
+.single-footer-widget .services-links {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.single-footer-widget .services-links li {
+  margin-bottom: 12px;
+}
+
+.single-footer-widget .services-links li a {
+  display: inline-block;
+  color: var(--paragraphColor);
+}
+
+.single-footer-widget .services-links li a:hover {
+  color: var(--mainColor);
+}
+
+.single-footer-widget .services-links li:last-child {
+  margin-bottom: 0;
+}
+
+.single-footer-widget .quick-links {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.single-footer-widget .quick-links li {
+  margin-bottom: 12px;
+}
+
+.single-footer-widget .quick-links li a {
+  display: inline-block;
+  color: var(--paragraphColor);
+}
+
+.single-footer-widget .quick-links li a:hover {
+  color: var(--mainColor);
+}
+
+.single-footer-widget .quick-links li:last-child {
+  margin-bottom: 0;
+}
+
+.single-footer-widget .footer-contact-info {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.single-footer-widget .footer-contact-info li {
+  margin-bottom: 12px;
+  color: var(--paragraphColor);
+}
+
+.single-footer-widget .footer-contact-info li a {
+  display: inline-block;
+  color: var(--paragraphColor);
+}
+
+.single-footer-widget .footer-contact-info li a:hover {
+  color: var(--mainColor);
+}
+
+.single-footer-widget .footer-contact-info li:last-child {
+  margin-bottom: 0;
+}
+
+.single-footer-widget.pl-5 {
+  padding-left: 3rem;
+}
+
+.copyright-area {
+  background-color: var(--whiteColor);
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.copyright-area p strong {
+  color: var(--blackColor);
+}
+
+.copyright-area p a {
+  color: var(--mainColor);
+  font-weight: 600;
+}
+
+.copyright-area p a:hover {
+  color: var(--optionalColor);
+}
+
+/*================================================
+Go Top CSS
+=================================================*/
+.go-top {
+  z-index: 4;
+  opacity: 0;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  bottom: 20px;
+  position: fixed;
+  cursor: pointer;
+  font-size: 30px;
+  border-radius: 50%;
+  visibility: hidden;
+  text-align: center;
+  color: var(--blackColor);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  background-color: var(--whiteColor);
+  -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.go-top i {
+  left: 0;
+  top: 50%;
+  right: 0;
+  text-align: center;
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.go-top.active {
+  opacity: 1;
+  bottom: 20px;
+  visibility: visible;
+}
+
+.go-top:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.bx.bx-chevron-down {
+  position: absolute;
+  right: 0;
+  font-size: 24px;
+}
+
+.bx.bx-chevron-up {
+  position: absolute;
+  right: 0;
+  font-size: 24px;
+}
+
+.dropdown .bx-chevron-down {
+  position: absolute;
+  right: 18px;
+  font-size: 26px;
+  color: #5466f9;
+}
+
+.dropdown .bx-chevron-up {
+  position: absolute;
+  right: 18px;
+  font-size: 26px;
+  color: #5466f9;
+}
+
+.crypto-name {
+  text-transform: uppercase;
+}
+
+.cryptocurrency-table td .crypto-image {
+  width: 13%;
+}
+
+.price-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.price-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dropdown-menu .coin-wrapper {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.single-value-trade-box {
+  text-align: center;
+}
+
+.crypto-search {
+  padding: 7px;
+  border: 1px solid #e0e0e0;
+  margin-left: 8px;
+}
+
+.cryptocurrency-table.table-responsive {
+  margin-top: 60px;
+}
+
+.cryptocurrency-table .table thead {
+  border: 1px solid #eee;
+}
+
+.form-select {
+  width: 100%;
+  margin: 0 8px;
+}
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.pagination ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 13px;
+}
+
+.pagination ul li {
+  margin-right: 10px;
+  list-style: none;
+  border: 1px solid #d0d0d0;
+  padding: 7px 13px;
+  border-radius: 50%;
+}
+
+.single-cryptocurrency-box .bestseller-coin-image {
+  width: 20%;
+}
+
+.count-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+.crypto-price-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cryptocurrency-table table {
+  margin-bottom: 0;
+  border: 1px solid #eee;
+}
+
+.cryptocurrency-table table tbody tr td {
+  border: none;
+  font-size: 18px;
+  padding: 20px 30px;
+  vertical-align: middle;
+  color: var(--blackColor);
+  width: 29%;
+  font-weight: 500;
+}
+
+.cryptocurrency-data-table .dataTables_wrapper .dataTables_paginate span .paginate_button.current {
+  background: var(--mainColor);
+  color: var(--whiteColor) !important;
+  border-color: var(--mainColor) !important;
+}
+
+.cryptocurrency-table .pagination .current {
+  background: var(--mainColor);
+  color: var(--whiteColor) !important;
+  border-color: var(--mainColor) !important;
+}
+
+.cryptocurrency-platform-slides .owl-nav [class*=owl-] {
+  margin-top: 6px;
+}
+
+.content-slides .owl-nav [class*=owl-] {
+  top: -14px;
+}
+
+.navbar-area .navbar {
+  padding: 0;
+  z-index: 999;
+}
+
+.cryptocurrency-slides .owl-nav [class*=owl-] {
+  top: -1px;
+}
+
+.single-feedback-item .client-info img {
+  width: 60px !important;
+  border-radius: 50%;
+}
+
+.feedback-slides .owl-nav [class*=owl-] {
+  top: 6px;
+}
+
+.dropdown-menu img {
+  margin-right: 10px;
+}
+
+.global-cursor {
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
+
+.secondary-btn {
+  background: var(--secondary-button-background-color, linear-gradient(97.62deg, #2b064d 0%, #4d0c8b 100%));
+  border-radius: 10px;
+}
+
+.secondary-btn.outlined {
+  color: #2b064d;
+  background: rgba(255, 255, 255, 0.6);
+  border: 3.29px solid;
+  border-radius: 8.23373px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+
+
+/* Toggle Switch CSS */
+:root {
+  --gray-5: #010101; /*dark*/
+  --gray-10: #040404;
+  --gray-15: #070808;
+  --gray-20: #0d0d0e;
+  --gray-25: #141516;
+  --gray-30: #1e2022;
+  --gray-35: #2d2f31;
+  --gray-40: #404346;
+  --gray-45: #5b5e62;
+  --gray-50: #7c8084;
+  --gray-55: #9da1a5;
+  --gray-60: #b9bdc1;
+  --gray-65: #cdd1d5;
+  --gray-70: #dce0e3;
+  --gray-75: #e7eaed;
+  --gray-80: #eff2f5;
+  --gray-85: #f4f7fa;
+  --gray-90: #f7fafd;
+  --gray-95: #fcfefe; /*light*/
+  --animate: 200ms;
+}
+.mode-toggle {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+}
+.toggle-switch {
+  margin: 0;
+  padding: 0;
+  width: 48px;
+  height: 28px;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  border-radius: 14px;
+  display: inline-block;
+  background: var(--gray-40);
+}
+.mode-toggle.dark .toggle-switch {
+  width: 48px;
+}
+.toggle-switch,
+.toggle-switch:before,
+.toggle-switch:after {
+  transition: all var(--animate) ease-in-out;
+}
+.mode-toggle.dark .toggle-switch {
+  background: var(--gray-70);
+}
+.toggle-switch:before {
+  top: 4px;
+  left: 24px;
+  content: '';
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  border-radius: 12px;
+  background: var(--gray-70);
+}
+.mode-toggle.dark .toggle-switch:before {
+  left: 4px;
+  background: var(--gray-35);
+}
+.toggle-switch:after {
+  content: '';
+  top: 14px;
+  right: 2px;
+  width: 1px;
+  height: 1px;
+  display: block;
+  position: absolute;
+  border-radius: 0.5px;
+  background: var(--gray-40);
+}
+.mode-toggle.dark .toggle-switch:after {
+  top: -2px;
+  right: 2px;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  background: var(--gray-70);
+}
+.toggle-switch:hover,
+.toggle-switch:hover:after {
+  background: var(--gray-35);
+}
+.toggle-switch:focus,
+.toggle-switch:active,
+.toggle-switch:active:after {
+  background: var(--gray-25);
+}
+.mode-toggle.dark .toggle-switch:hover,
+.mode-toggle.dark .toggle-switch:hover:after {
+  background: var(--gray-95);
+}
+.mode-toggle.dark .toggle-switch:focus,
+.mode-toggle.dark .toggle-switch:active,
+.mode-toggle.dark .toggle-switch:active:after {
+  background: var(--gray-65);
+}
+.noselect {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+.disableEasingTemporarily,
+.disableEasingTemporarily:after,
+.disableEasingTemporarily:before {
+  -o-transition-property: none !important;
+  -moz-transition-property: none !important;
+  -ms-transition-property: none !important;
+  -webkit-transition-property: none !important;
+  transition-property: none !important;
+  -o-transform: none !important;
+  -moz-transform: none !important;
+  -ms-transform: none !important;
+  -webkit-transform: none !important;
+  transform: none !important;
+  -webkit-animation: none !important;
+  -moz-animation: none !important;
+  -o-animation: none !important;
+  -ms-animation: none !important;
+  animation: none !important;
+}
+/* end */
+
+
